@@ -54,7 +54,50 @@
     } else correr();
   }
 
-  // Formulario: por ahora no envía
+  // Formulario: manda los datos por mail (FormSubmit) y ofrece la agenda
+  var AGENDA = '';
   var f = document.querySelector('form');
-  if (f) f.addEventListener('submit', function (e) { e.preventDefault(); });
+  if (f) {
+    var btn = f.querySelector('button[type="submit"]'), msg = f.querySelector('.form-msg');
+    var trampa = document.createElement('input');
+    trampa.type = 'text'; trampa.name = '_honey'; trampa.tabIndex = -1; trampa.autocomplete = 'off';
+    trampa.setAttribute('aria-hidden', 'true'); trampa.style.cssText = 'position:absolute;left:-9999px;width:1px;height:1px;opacity:0';
+    f.appendChild(trampa);
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!f.reportValidity()) return;
+      var d = new FormData(f), texto = btn.textContent;
+      btn.disabled = true; btn.textContent = 'Enviando…'; msg.textContent = '';
+      fetch('https://formsubmit.co/ajax/astorarquitectura@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          Nombre: d.get('nombre') || '',
+          'Estudio o constructora': d.get('empresa') || '',
+          Mail: d.get('mail') || '',
+          _replyto: d.get('mail') || '',
+          _subject: 'Nueva consulta desde la landing de Astor',
+          _template: 'table',
+          _honey: d.get('_honey') || ''
+        })
+      }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function () {
+          f.reset();
+          msg.style.color = '#3F4024';
+          msg.textContent = '¡Gracias! Recibimos tus datos y te escribimos para coordinar la llamada.';
+          if (AGENDA) {
+            var a = document.createElement('a');
+            a.href = AGENDA; a.target = '_blank'; a.rel = 'noopener';
+            a.textContent = 'Elegí día y hora ahora';
+            a.style.cssText = 'display:inline-flex;align-items:center;justify-content:center;min-height:44px;margin-top:10px;padding:10px 20px;border-radius:999px;border:1.5px solid #595A34;color:#3F4024;font-weight:600;text-decoration:none';
+            msg.appendChild(document.createElement('br')); msg.appendChild(a);
+          }
+        })
+        .catch(function () {
+          msg.style.color = '#9C4A3A';
+          msg.textContent = 'No se pudo enviar. Probá de nuevo o escribinos a astorarquitectura@gmail.com.';
+        })
+        .then(function () { btn.disabled = false; btn.textContent = texto; });
+    });
+  }
 })();
