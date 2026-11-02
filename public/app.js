@@ -84,7 +84,7 @@
         .then(function () {
           f.reset();
           msg.style.color = '#3F4024';
-          msg.textContent = '¡Gracias! Recibimos tus datos y te escribimos para coordinar la llamada.';
+          msg.textContent = '¡Gracias! Ya recibimos tus datos, pronto te escribiremos para coordinar la llamada.';
           if (AGENDA) {
             var a = document.createElement('a');
             a.href = AGENDA; a.target = '_blank'; a.rel = 'noopener';
