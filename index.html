@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Astor · Todos tus proyectos en una única plataforma</title>
+<meta name="description" content="Astor: gestión de obras para estudios de arquitectura y constructoras. Cómputos y presupuestos en BIM, compras, cobros, finanzas y un asistente con IA.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Lora:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="lp" class="lp intro-on" style="background: #F4F1EB; color: #222222; font-family: 'Hanken Grotesk', sans-serif; font-size: 17px; line-height: 1.6; overflow-x: hidden">
+<div id="intro" class="i3" role="presentation">
+<div class="i3-frase" style="position: absolute; inset: 0; display: flex; align-items: center">
+<div class="i3-grid">
+<p class="i3-lbl" style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #E2DCC9">Tu estudio necesita</p>
+<div class="i3-col" aria-hidden="true"><div class="i3-lista"><span class="i3i i3on" style="animation: i3Apaga .3s ease-out 1.50s both">cómputos exactos.</span><span class="i3i" style="animation: i3Pulso 1.15s linear 1.50s both">presupuestos sin desvíos.</span><span class="i3i" style="animation: i3Pulso 1.15s linear 2.35s both">administración ordenada.</span><span class="i3i" style="animation: i3Pulso 1.15s linear 3.20s both">finanzas claras.</span><span class="i3i" style="animation: i3Pulso 1.15s linear 4.05s both">tecnología.</span><span class="i3i" style="animation: i3Prende .4s ease-out 4.90s both">Astor.</span></div></div>
+</div>
+</div>
+<div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 0 24px; text-align: center">
+<img class="i3-logo" src="logo.png" alt="Astor" style="height: clamp(28px, 3.2vw, 40px); width: auto; display: block">
+<p class="i3-tag" style="margin: 0; max-width: 600px; font-size: clamp(15px, 1.3vw, 17px); line-height: 1.55; font-weight: 400; color: #EDE9DF">La tecnología que tu estudio estaba necesitando.</p>
+</div>
+<button type="button" class="i3-saltar" id="saltar" style="position: absolute; top: 22px; right: max(32px, calc((100% - 1240px) / 2 + 32px)); font: inherit; font-size: 14px; font-weight: 600; color: #F4F1EB; background: transparent; border: 1.5px solid rgba(244,241,235,0.6); border-radius: 999px; padding: 10px 20px; min-height: 44px; display: inline-flex; align-items: center; cursor: pointer">Saltar intro</button>
+</div>
+<header style="background: #595A34; color: #F4F1EB; position: relative; z-index: 2">
+<div aria-hidden="true" style="position: absolute; inset: 0; overflow: hidden; pointer-events: none"><svg class="plano" aria-hidden="true" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.16; pointer-events: none" fill="none" stroke="#F4F1EB" stroke-width="1.2">
+<rect x="80" y="120" width="300" height="220" rx="2" style="animation-delay: .2s"></rect>
+<path d="M80 230h300M230 120v220M150 340v-40a30 30 0 0 1 30-30" style="animation-delay: .6s"></path>
+<rect x="1080" y="90" width="280" height="300" rx="2" style="animation-delay: .4s"></rect>
+<path d="M1080 200h180M1260 90v300M1160 390a40 40 0 0 1 40-40" style="animation-delay: .9s"></path>
+<path d="M40 560h1360M120 540v40M420 540v40M720 540v40M1020 540v40M1320 540v40" style="animation-delay: 1.2s"></path>
+<circle cx="1220" cy="620" r="70" style="animation-delay: 1.5s"></circle>
+<path d="M200 640l120 -60l120 60M210 700h220" style="animation-delay: 1.8s"></path>
+</svg></div>
+<nav aria-label="Principal" style="position: relative; max-width: 1240px; margin: 0 auto; padding: 22px 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px; font-family: 'Hanken Grotesk', sans-serif">
+<a href="#inicio" style="display: flex; align-items: center; text-decoration: none"><img src="logo.png" alt="Astor" style="height: 22px; width: auto; display: block"></a>
+<div style="display: flex; flex-wrap: wrap; gap: 6px 28px; flex: 1 1 320px; justify-content: center; font-size: 15px; font-weight: 500">
+<a href="#dolores" style="color: #F4F1EB; text-decoration: none">Por qué Astor</a>
+<a href="#que-hace" style="color: #F4F1EB; text-decoration: none">Qué hace</a>
+<a href="#como" style="color: #F4F1EB; text-decoration: none">Cómo se empieza</a>
+</div>
+<a href="#demo" class="btn2" style="border: 1.5px solid rgba(244,241,235,0.6); color: #F4F1EB; text-decoration: none; font-weight: 600; font-size: 15px; padding: 11px 22px; border-radius: 999px; min-height: 44px; display: inline-flex; align-items: center">Agendemos una llamada</a>
+</nav>
+<section id="inicio" style="position: relative; max-width: 1240px; margin: 0 auto; padding: 64px 32px 0; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 22px">
+<p class="entra" style="margin: 0; font-family: 'Hanken Grotesk', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #E2DCC9; animation-delay: .05s">App para gestión de estudios de arquitectura y constructoras</p>
+<h1 style="margin: 0; font-family: 'Hanken Grotesk', sans-serif; font-weight: 700; font-size: clamp(42px, 6.4vw, 82px); line-height: 1.02; letter-spacing: -0.025em; max-width: 1000px">
+<span class="pal" style="animation-delay: .15s">Todos</span> <span class="pal" style="animation-delay: .23s">tus</span> <span class="pal" style="animation-delay: .31s">proyectos</span> <span class="pal" style="animation-delay: .39s">en</span> <span class="pal" style="animation-delay: .47s">una</span> <span class="pal" style="animation-delay: .55s; color: #D8C9B0">única</span> <span class="pal" style="animation-delay: .63s">plataforma.</span>
+</h1>
+<ul aria-label="Lo que ordena Astor" class="entra" style="list-style: none; margin: 2px 0 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; font-family: 'Hanken Grotesk', sans-serif; font-size: clamp(15px, 1.5vw, 18px); font-weight: 500; color: #F4F1EB; animation-delay: .8s">
+<li style="padding: 4px 18px; border-left: 1px solid rgba(244,241,235,0.35)">Costos</li>
+<li style="padding: 4px 18px; border-left: 1px solid rgba(244,241,235,0.35)">Presupuestos</li>
+<li style="padding: 4px 18px; border-left: 1px solid rgba(244,241,235,0.35)">Clientes</li>
+<li style="padding: 4px 18px; border-left: 1px solid rgba(244,241,235,0.35)">Proveedores</li>
+<li style="padding: 4px 18px; border-left: 1px solid rgba(244,241,235,0.35)">Compras</li>
+<li style="padding: 4px 18px; border-left: 1px solid rgba(244,241,235,0.35)">Cobros</li>
+<li style="padding: 4px 18px; border-left: 1px solid rgba(244,241,235,0.35); border-right: 1px solid rgba(244,241,235,0.35)">Obra</li>
+</ul>
+<p class="entra" style="margin: 0; max-width: 680px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.55; color: #EDE9DF; animation-delay: .95s">Dejá de buscar en planillas, chats y carpetas. Cada proyecto con sus números, su gente y sus papeles, en orden y siempre al día.</p>
+<div class="entra" style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; font-family: 'Hanken Grotesk', sans-serif; margin-top: 6px; animation-delay: 1.1s">
+<a href="#demo" class="cta" style="background: #F4F1EB; color: #3F4024; text-decoration: none; font-weight: 600; font-size: 16px; padding: 15px 30px; border-radius: 999px; min-height: 48px; display: inline-flex; align-items: center">Agendemos una llamada</a>
+<a href="#dolores" class="btn2" style="border: 1.5px solid rgba(244,241,235,0.55); color: #F4F1EB; text-decoration: none; font-weight: 600; font-size: 16px; padding: 14px 26px; border-radius: 999px; min-height: 48px; display: inline-flex; align-items: center">Conocé más sobre Astor</a>
+</div>
+<div class="pantalla" style="width: 100%; margin-top: 38px; margin-bottom: -150px; display: flex; justify-content: center">
+<div class="pantalla-in mkz">
+<div class="mk" style="width: 1100px; border-radius: 16px; overflow: hidden; box-shadow: 0 40px 80px -36px rgba(0,0,0,0.6); border: 1px solid rgba(244,241,235,0.25); background: #F4F1EB; text-align: left; font-family: 'Hanken Grotesk', sans-serif; font-size: 12px; line-height: 1.35; color: #222222">
+<div style="display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 14px; background: #2E2F1D; color: rgba(244,241,235,.75); font-size: 12px">
+<span style="width: 10px; height: 10px; border-radius: 50%; background: #9C4A3A"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #D8C9B0"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #A7AC5F"></span>
+<span style="flex: 1; text-align: center">Astor Estudio</span><span style="width: 46px"></span>
+</div>
+<div style="display: flex; height: 600px">
+<!-- barra lateral: se marca la sección que se está viendo -->
+<div style="width: 178px; flex: none; background: #595A34; color: #F4F1EB; padding: 16px 10px; display: flex; flex-direction: column; gap: 1px">
+<img src="logo.png" alt="" style="height: 15px; width: auto; align-self: flex-start; margin: 2px 8px 14px">
+<div style="display: flex; justify-content: space-between; align-items: center; margin: 0 2px 10px; padding: 6px 9px; border-radius: 8px; background: rgba(244,241,235,.12); color: rgba(244,241,235,.7); font-size: 11px">Buscar…<span style="font-size: 9.5px; border: 1px solid rgba(244,241,235,.3); border-radius: 4px; padding: 0 4px">Ctrl K</span></div>
+<p class="mk-g">Mi día</p>
+<span class="mk-i" style="--d: 0s">General</span><span class="mk-i" style="--d: 3s">Semana</span><span class="mk-i0">Tareas</span><span class="mk-i0">Mails</span><span class="mk-i0">Reuniones</span>
+<p class="mk-g">Obras</p>
+<span class="mk-i" style="--d: 6s">Proyectos</span><span class="mk-i" style="--d: 12s">Compras</span><span class="mk-i" style="--d: 15s">Proveedores</span><span class="mk-i" style="--d: 18s">Personal</span>
+<p class="mk-g">Estudio</p>
+<span class="mk-i" style="--d: 9s">Presupuestos</span><span class="mk-i" style="--d: 21s">Clientes</span><span class="mk-i" style="--d: 30s">Marketing</span><span class="mk-i" style="--d: 24s">Finanzas</span><span class="mk-i" style="--d: 27s">Horas</span><span class="mk-i" style="--d: 33s">Índices</span>
+</div>
+<div style="position: relative; flex: 1; min-width: 0; overflow: hidden">
+<!-- 1 · General -->
+<div class="scr" style="--d: 0s">
+<p class="mk-cr">General · Buen día, Martín</p><h4 class="mk-h">Martes 13 de octubre</h4>
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px">
+<div class="k a" style="--s: .1s"><small>Obras activas</small><b>6</b><span>2 por empezar</span></div>
+<div class="k a" style="--s: .2s"><small>Por cobrar este mes</small><b>$ 18,4 M</b><span style="color: #9C4A3A">1 certificado vencido</span></div>
+<div class="k a" style="--s: .3s"><small>Tareas de hoy</small><b>7</b><span>3 en obra</span></div>
+<div class="k a" style="--s: .4s"><small>Compras a pedir</small><b>12</b><span>esta semana</span></div>
+</div>
+<div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 10px; margin-top: 10px">
+<div class="c a" style="--s: .3s"><p class="t">Avance de las obras</p>
+<div class="fila"><span>CC · Casa Carmelo</span><div class="pista"><i class="bh" style="width: 64%; --s: .5s"></i></div><b>64%</b></div>
+<div class="fila"><span>LZ · Remodelación Lezica</span><div class="pista"><i class="bh" style="width: 38%; --s: .6s; background: #A7AC5F"></i></div><b>38%</b></div>
+<div class="fila"><span>MO · Edificio Moreno</span><div class="pista"><i class="bh" style="width: 81%; --s: .7s"></i></div><b>81%</b></div>
+<div class="fila"><span>GU · Local Güemes</span><div class="pista"><i class="bh" style="width: 22%; --s: .8s; background: #D8C9B0"></i></div><b>22%</b></div>
+<div class="fila"><span>PB · Casa del Bosque</span><div class="pista"><i class="bh" style="width: 9%; --s: .9s; background: #D8C9B0"></i></div><b>9%</b></div>
+<p class="t" style="margin-top: 14px">Cronograma</p>
+<div style="position: relative; height: 70px; border-left: 1px solid #D6D2CA">
+<i class="bh" style="position: absolute; left: 0; top: 4px; width: 46%; height: 12px; border-radius: 6px; background: #595A34; --s: .8s"></i>
+<i class="bh" style="position: absolute; left: 18%; top: 22px; width: 55%; height: 12px; border-radius: 6px; background: #A7AC5F; --s: .9s"></i>
+<i class="bh" style="position: absolute; left: 40%; top: 40px; width: 38%; height: 12px; border-radius: 6px; background: #D8C9B0; --s: 1s"></i>
+<i style="position: absolute; left: 34%; top: -2px; bottom: 0; width: 2px; background: #9C4A3A"></i>
+</div>
+</div>
+<div class="c a" style="--s: .4s"><p class="t">Hoy</p>
+<div class="tk a" style="--s: .6s"><i style="background: #9C4A3A"></i>Pagar 2ª quincena · CC</div>
+<div class="tk a" style="--s: .7s"><i style="background: #595A34"></i>Visita de obra 10:00 · Moreno</div>
+<div class="tk a" style="--s: .8s"><i style="background: #A7AC5F"></i>Aprobar pedido de cerámicos</div>
+<div class="tk a" style="--s: .9s"><i style="background: #D8C9B0"></i>Emitir certificado 4 · Lezica</div>
+<div class="tk a" style="--s: 1s"><i style="background: #595A34"></i>Reunión con cliente 17:30</div>
+<div style="display: flex; align-items: center; gap: 14px; margin-top: 14px">
+<svg width="74" height="74" viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.9" fill="none" stroke="#E8E4DC" stroke-width="4"></circle><circle class="dona" cx="18" cy="18" r="15.9" fill="none" stroke="#595A34" stroke-width="4" stroke-linecap="round" transform="rotate(-90 18 18)" style="--v: 68"></circle></svg>
+<div><b class="cnt" style="--to: 68; font-size: 22px"></b><b style="font-size: 22px">%</b><br><span style="color: #6A6A63">de las tareas de la semana, hechas</span></div>
+</div>
+</div>
+</div>
+</div>
+<!-- 2 · Semana -->
+<div class="scr" style="--d: 3s">
+<p class="mk-cr">Semana 42 · 12 — 18 de octubre</p><h4 class="mk-h">Tu semana</h4>
+<div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; height: 470px">
+<div class="dia"><small>LUN 12</small><i class="ev a" style="--s: .2s; height: 46px; background: #E3E4CF">Compra de hierro · CC</i><i class="ev a" style="--s: .5s; height: 70px; background: #595A34; color: #F4F1EB">Reunión de obra · Moreno</i></div>
+<div class="dia" style="background: #FFFFFF; border-color: #595A34"><small style="color: #595A34">MAR 13 · HOY</small><i class="ev a" style="--s: .3s; height: 40px; background: #F1DDD7; color: #7A3326">Pagar quincena</i><i class="ev a" style="--s: .6s; height: 60px; background: #595A34; color: #F4F1EB">Visita · Moreno</i><i class="ev a" style="--s: .9s; height: 40px; background: #EFE7D8">Pedido cerámicos</i></div>
+<div class="dia"><small>MIÉ 14</small><i class="ev a" style="--s: .4s; height: 84px; background: #E3E4CF">Hormigonado losa · Moreno</i><i class="ev a" style="--s: .8s; height: 36px; background: #EFE7D8">Llega volquete</i></div>
+<div class="dia"><small>JUE 15</small><i class="ev a" style="--s: .5s; height: 50px; background: #F1DDD7; color: #7A3326">Vence certificado 3</i><i class="ev a" style="--s: .9s; height: 64px; background: #595A34; color: #F4F1EB">Cliente · Lezica</i></div>
+<div class="dia"><small>VIE 16</small><i class="ev a" style="--s: .6s; height: 40px; background: #EFE7D8">Devolver andamio</i><i class="ev a" style="--s: 1s; height: 74px; background: #E3E4CF">Posteo: avance Carmelo</i></div>
+<div class="dia"><small>SÁB 17</small><i class="ev a" style="--s: .7s; height: 44px; background: #E3E4CF">Medición · Güemes</i></div>
+</div>
+</div>
+<!-- 3 · Proyectos (una obra) -->
+<div class="scr" style="--d: 6s">
+<p class="mk-cr">Proyectos · Anteproyecto · Balneario Zagarzazu</p>
+<div style="display: flex; align-items: center; gap: 10px"><span style="background: #595A34; color: #F4F1EB; border-radius: 6px; padding: 2px 7px; font-weight: 700">CC</span><h4 class="mk-h" style="margin: 0">Casa Carmelo</h4></div>
+<div style="display: flex; gap: 6px; margin: 12px 0"><span class="pl">Seguimiento</span><span class="pl on">Económico</span><span class="pl">Ejecución</span><span class="pl">Análisis</span><span style="flex: 1"></span><span class="pl">Informes ▾</span></div>
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px">
+<div class="k a" style="--s: .1s"><small>Presupuestado</small><b>$ 25,7 M</b><span>v3 · CAC agosto 2026</span></div>
+<div class="k a" style="--s: .2s"><small>Gastado</small><b>$ 14,2 M</b><span>55% del presupuesto</span></div>
+<div class="k a" style="--s: .3s"><small>Avance</small><b>61%</b><span>al día con el plan</span></div>
+<div class="k a" style="--s: .4s"><small>Desvío</small><b style="color: #9C4A3A">+2,1%</b><span>mampostería arriba</span></div>
+</div>
+<div class="c a" style="--s: .3s; margin-top: 10px"><p class="t">Presupuesto contra real, por rubro</p>
+<div style="display: flex; align-items: flex-end; gap: 22px; height: 230px; padding: 0 6px; border-bottom: 1px solid #D6D2CA">
+<div class="gb"><i class="b" style="height: 60%; --s: .4s"></i><i class="b r" style="height: 58%; --s: .5s"></i></div>
+<div class="gb"><i class="b" style="height: 88%; --s: .5s"></i><i class="b r" style="height: 95%; --s: .6s; background: #9C4A3A"></i></div>
+<div class="gb"><i class="b" style="height: 72%; --s: .6s"></i><i class="b r" style="height: 66%; --s: .7s"></i></div>
+<div class="gb"><i class="b" style="height: 45%; --s: .7s"></i><i class="b r" style="height: 30%; --s: .8s"></i></div>
+<div class="gb"><i class="b" style="height: 52%; --s: .8s"></i><i class="b r" style="height: 18%; --s: .9s"></i></div>
+<div class="gb"><i class="b" style="height: 38%; --s: .9s"></i><i class="b r" style="height: 8%; --s: 1s"></i></div>
+<div class="gb"><i class="b" style="height: 64%; --s: 1s"></i><i class="b r" style="height: 4%; --s: 1.1s"></i></div>
+<div class="gb"><i class="b" style="height: 30%; --s: 1.1s"></i><i class="b r" style="height: 0%; --s: 1.2s"></i></div>
+</div>
+<div style="display: flex; gap: 22px; padding: 6px 6px 0; color: #6A6A63; font-size: 10.5px"><span class="gl">Estructura</span><span class="gl">Mampostería</span><span class="gl">Pisos</span><span class="gl">Instalaciones</span><span class="gl">Revoques</span><span class="gl">Carpinterías</span><span class="gl">Terminaciones</span><span class="gl">Exteriores</span></div>
+<div style="display: flex; gap: 16px; margin-top: 10px; font-size: 11px; color: #4A4A45"><span><i style="display: inline-block; width: 9px; height: 9px; border-radius: 2px; background: #D6D2CA"></i> Presupuestado</span><span><i style="display: inline-block; width: 9px; height: 9px; border-radius: 2px; background: #595A34"></i> Real</span></div>
+</div>
+</div>
+<!-- 4 · Presupuestos -->
+<div class="scr" style="--d: 9s">
+<p class="mk-cr">Presupuestos · con tus análisis de precio</p>
+<div style="display: flex; align-items: flex-end; justify-content: space-between"><h4 class="mk-h" style="margin: 0">Casa Carmelo · v3</h4><div class="a" style="--s: .2s; text-align: right"><small style="color: #6A6A63">Precio al cliente</small><br><b style="font-size: 26px; color: #595A34">$ 25.777.646</b></div></div>
+<div style="display: flex; gap: 6px; margin: 10px 0"><span class="chip">CAC agosto 2026 · 22.945,2</span><span class="chip">Escala UOCRA vigente</span><span class="chip">Tipo: casa</span><span class="chip" style="background: #595A34; color: #F4F1EB">Congelado</span></div>
+<div class="c a" style="--s: .2s; padding: 0; overflow: hidden">
+<div class="tr th"><span>Rubro</span><span>Incidencia</span><span style="text-align: right">Subtotal</span></div>
+<div class="tr a" style="--s: .3s"><span>01 · Trabajos preliminares</span><div class="pista"><i class="bh" style="width: 22%; --s: .5s"></i></div><span>$ 1.212.750</span></div>
+<div class="tr a" style="--s: .35s"><span>02 · Estructura resistente</span><div class="pista"><i class="bh" style="width: 86%; --s: .55s"></i></div><span>$ 6.186.635</span></div>
+<div class="tr a" style="--s: .4s"><span>03 · Albañilería</span><div class="pista"><i class="bh" style="width: 65%; --s: .6s"></i></div><span>$ 4.639.976</span></div>
+<div class="tr a" style="--s: .45s"><span>04 · Revoques</span><div class="pista"><i class="bh" style="width: 32%; --s: .65s"></i></div><span>$ 2.319.988</span></div>
+<div class="tr a" style="--s: .5s"><span>05 · Pisos y zócalos</span><div class="pista"><i class="bh" style="width: 43%; --s: .7s"></i></div><span>$ 3.093.317</span></div>
+<div class="tr a" style="--s: .55s"><span>06 · Instalación sanitaria</span><div class="pista"><i class="bh" style="width: 29%; --s: .75s"></i></div><span>$ 2.062.211</span></div>
+<div class="tr a" style="--s: .6s"><span>07 · Instalación eléctrica</span><div class="pista"><i class="bh" style="width: 25%; --s: .8s"></i></div><span>$ 1.804.435</span></div>
+<div class="tr a" style="--s: .65s"><span>08 · Carpinterías</span><div class="pista"><i class="bh" style="width: 40%; --s: .85s"></i></div><span>$ 2.835.541</span></div>
+<div class="tr a" style="--s: .7s"><span>09 · Pintura y terminaciones</span><div class="pista"><i class="bh" style="width: 18%; --s: .9s"></i></div><span>$ 1.622.793</span></div>
+</div>
+</div>
+<!-- 5 · Compras -->
+<div class="scr" style="--d: 12s">
+<p class="mk-cr">Compras · todas las obras</p><h4 class="mk-h">Qué hay que pedir esta semana</h4>
+<div style="display: grid; grid-template-columns: 1.55fr 1fr; gap: 10px">
+<div class="c a" style="--s: .2s; padding: 0; overflow: hidden">
+<div class="tr th" style="grid-template-columns: 1.6fr .6fr .8fr .8fr"><span>Material</span><span>Obra</span><span>Para el</span><span>Estado</span></div>
+<div class="tr a" style="--s: .3s; grid-template-columns: 1.6fr .6fr .8fr .8fr"><span>Cemento × 40 bolsas</span><span>CC</span><span>15/10</span><span class="st ok">Pedido</span></div>
+<div class="tr a" style="--s: .4s; grid-template-columns: 1.6fr .6fr .8fr .8fr"><span>Hierro Ø8 × 60 barras</span><span>MO</span><span>14/10</span><span class="st ok">Recibido</span></div>
+<div class="tr a" style="--s: .5s; grid-template-columns: 1.6fr .6fr .8fr .8fr"><span>Porcelanato 60×60 · 48 m²</span><span>LZ</span><span>20/10</span><span class="st pe">A pedir</span></div>
+<div class="tr a" style="--s: .6s; grid-template-columns: 1.6fr .6fr .8fr .8fr"><span>Ladrillo hueco 12 × 1.800</span><span>CC</span><span>17/10</span><span class="st pe">A pedir</span></div>
+<div class="tr a" style="--s: .7s; grid-template-columns: 1.6fr .6fr .8fr .8fr"><span>Caño PPN 110 × 12</span><span>GU</span><span>22/10</span><span class="st co">Cotizando</span></div>
+<div class="tr a" style="--s: .8s; grid-template-columns: 1.6fr .6fr .8fr .8fr"><span>Andamio tubular · alquiler</span><span>MO</span><span>vence 16/10</span><span class="st al">Devolver</span></div>
+<div class="tr a" style="--s: .9s; grid-template-columns: 1.6fr .6fr .8fr .8fr"><span>Arena gruesa · 6 m³</span><span>CC</span><span>15/10</span><span class="st ok">Pedido</span></div>
+</div>
+<div class="c a" style="--s: .3s"><p class="t">Gastado por rubro · octubre</p>
+<div style="display: flex; justify-content: center; margin: 8px 0 12px">
+<svg width="170" height="170" viewBox="0 0 36 36">
+<circle cx="18" cy="18" r="15.9" fill="none" stroke="#E8E4DC" stroke-width="5"></circle>
+<circle class="dona" cx="18" cy="18" r="15.9" fill="none" stroke="#595A34" stroke-width="5" transform="rotate(-90 18 18)" style="--v: 42"></circle>
+<circle class="dona" cx="18" cy="18" r="15.9" fill="none" stroke="#A7AC5F" stroke-width="5" transform="rotate(61 18 18)" style="--v: 26; --s: .2s"></circle>
+<circle class="dona" cx="18" cy="18" r="15.9" fill="none" stroke="#D8C9B0" stroke-width="5" transform="rotate(155 18 18)" style="--v: 19; --s: .4s"></circle>
+<circle class="dona" cx="18" cy="18" r="15.9" fill="none" stroke="#9C4A3A" stroke-width="5" transform="rotate(223 18 18)" style="--v: 13; --s: .6s"></circle>
+<text x="18" y="17.5" text-anchor="middle" font-size="4.2" font-weight="700" fill="#222">$ 9,8 M</text><text x="18" y="22" text-anchor="middle" font-size="2.6" fill="#6A6A63">este mes</text>
+</svg></div>
+<div class="ley"><i style="background: #595A34"></i>Estructura<b>42%</b></div><div class="ley"><i style="background: #A7AC5F"></i>Albañilería<b>26%</b></div><div class="ley"><i style="background: #D8C9B0"></i>Instalaciones<b>19%</b></div><div class="ley"><i style="background: #9C4A3A"></i>Alquileres<b>13%</b></div>
+</div>
+</div>
+</div>
+<!-- 6 · Proveedores -->
+<div class="scr" style="--d: 15s">
+<p class="mk-cr">Proveedores · pedido N° 118</p><h4 class="mk-h">Comparar cotizaciones</h4>
+<div class="c a" style="--s: .2s"><p class="t">Porcelanato 60×60 · 48 m² · Remodelación Lezica</p>
+<div class="cot a" style="--s: .3s"><span><b>Cerámicos del Sur</b><br><small>entrega 5 días</small></span><div class="pista" style="height: 22px"><i class="bh" style="width: 72%; --s: .5s; background: #A7AC5F"></i></div><b>$ 1.382.400</b></div>
+<div class="cot a" style="--s: .4s; border-color: #595A34; background: #F7F6EE"><span><b>Revestimientos Norte</b><br><small style="color: #595A34; font-weight: 700">Mejor precio</small></span><div class="pista" style="height: 22px"><i class="bh" style="width: 61%; --s: .6s"></i></div><b style="color: #595A34">$ 1.171.200</b></div>
+<div class="cot a" style="--s: .5s"><span><b>Corralón El Sol</b><br><small>entrega 2 días</small></span><div class="pista" style="height: 22px"><i class="bh" style="width: 84%; --s: .7s; background: #D8C9B0"></i></div><b>$ 1.612.800</b></div>
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 14px"><span style="color: #4A4A45">Ahorro contra el más caro: <b style="color: #595A34">$ 441.600</b></span><span class="boton a" style="--s: 1s">Aprobar y enviar</span></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px">
+<div class="k a" style="--s: .6s"><small>Proveedores</small><b>48</b><span>con historial de precios</span></div>
+<div class="k a" style="--s: .7s"><small>Pedidos del mes</small><b>23</b><span>19 entregados</span></div>
+<div class="k a" style="--s: .8s"><small>Facturas leídas</small><b>31</b><span>imputadas a su obra</span></div>
+</div>
+</div>
+<!-- 7 · Personal -->
+<div class="scr" style="--d: 18s">
+<p class="mk-cr">Personal · escala UOCRA vigente × cargas</p><h4 class="mk-h">2ª quincena de octubre</h4>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px">
+<div class="k a" style="--s: .1s"><small>A pagar</small><b>$ 3.248.600</b><span>11 personas · 3 obras</span></div>
+<div class="k a" style="--s: .2s"><small>Horas cargadas</small><b>968 h</b><span>97% de lo previsto</span></div>
+<div class="k a" style="--s: .3s"><small>Mano de obra consumida</small><b>58%</b><span>del presupuesto</span></div>
+</div>
+<div class="c a" style="--s: .3s; margin-top: 10px"><p class="t">Horas por persona</p>
+<div class="fila"><span>Oficial especializado · Ramírez</span><div class="pista"><i class="bh" style="width: 96%; --s: .4s"></i></div><b>96 h</b></div>
+<div class="fila"><span>Oficial · Gómez</span><div class="pista"><i class="bh" style="width: 92%; --s: .5s"></i></div><b>92 h</b></div>
+<div class="fila"><span>Oficial · Benítez</span><div class="pista"><i class="bh" style="width: 88%; --s: .6s"></i></div><b>88 h</b></div>
+<div class="fila"><span>Medio oficial · Duarte</span><div class="pista"><i class="bh" style="width: 90%; --s: .7s; background: #A7AC5F"></i></div><b>90 h</b></div>
+<div class="fila"><span>Medio oficial · Sosa</span><div class="pista"><i class="bh" style="width: 74%; --s: .8s; background: #A7AC5F"></i></div><b>74 h</b></div>
+<div class="fila"><span>Ayudante · Ledesma</span><div class="pista"><i class="bh" style="width: 86%; --s: .9s; background: #D8C9B0"></i></div><b>86 h</b></div>
+<div class="fila"><span>Ayudante · Paz</span><div class="pista"><i class="bh" style="width: 64%; --s: 1s; background: #D8C9B0"></i></div><b>64 h</b></div>
+</div>
+</div>
+<!-- 8 · Clientes y cobros -->
+<div class="scr" style="--d: 21s">
+<p class="mk-cr">Clientes · cobros y certificados</p><h4 class="mk-h">Qué te deben y qué cobraste</h4>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px">
+<div class="k a" style="--s: .1s"><small>Cobrado en el año</small><b>$ 61,3 M</b><span>CAC ajustado</span></div>
+<div class="k a" style="--s: .2s"><small>Pendiente</small><b>$ 7,7 M</b><span>3 certificados</span></div>
+<div class="k a" style="--s: .3s"><small>Vencido</small><b style="color: #9C4A3A">$ 1,0 M</b><span>Lezica · hace 6 días</span></div>
+</div>
+<div class="c a" style="--s: .3s; margin-top: 10px"><p class="t">Cobros por mes</p>
+<div style="display: flex; align-items: flex-end; gap: 16px; height: 250px; border-bottom: 1px solid #D6D2CA; padding: 0 8px">
+<div class="mes"><i class="b" style="height: 34%; --s: .4s"></i></div><div class="mes"><i class="b" style="height: 52%; --s: .45s"></i></div><div class="mes"><i class="b" style="height: 46%; --s: .5s"></i></div><div class="mes"><i class="b" style="height: 70%; --s: .55s"></i></div><div class="mes"><i class="b" style="height: 61%; --s: .6s"></i></div><div class="mes"><i class="b" style="height: 82%; --s: .65s"></i></div><div class="mes"><i class="b" style="height: 75%; --s: .7s"></i></div><div class="mes"><i class="b" style="height: 90%; --s: .75s"></i></div><div class="mes"><i class="b" style="height: 68%; --s: .8s"></i></div><div class="mes"><i class="b" style="height: 40%; --s: .85s; background: #A7AC5F"></i><i class="b" style="height: 38%; --s: .9s; background: repeating-linear-gradient(45deg, #D8C9B0 0 4px, #EFE7D8 4px 8px)"></i></div>
+</div>
+<div style="display: flex; gap: 16px; padding: 6px 8px 0; color: #6A6A63; font-size: 10.5px"><span class="gl">ene</span><span class="gl">feb</span><span class="gl">mar</span><span class="gl">abr</span><span class="gl">may</span><span class="gl">jun</span><span class="gl">jul</span><span class="gl">ago</span><span class="gl">sep</span><span class="gl">oct</span></div>
+</div>
+</div>
+<!-- 9 · Finanzas -->
+<div class="scr" style="--d: 24s">
+<p class="mk-cr">Finanzas · pesos y dólares</p><h4 class="mk-h">Cash flow de todas las obras</h4>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px">
+<div class="k a" style="--s: .1s"><small>Saldo en cuentas</small><b>$ 12.480.300</b><span>US$ 4.120</span></div>
+<div class="k a" style="--s: .2s"><small>Por cobrar</small><b>$ 7.733.294</b><span>emitido sin cobrar</span></div>
+<div class="k a" style="--s: .3s"><small>Margen real</small><b>18,4%</b><span>sobre lo certificado</span></div>
+</div>
+<div class="c a" style="--s: .3s; margin-top: 10px"><p class="t">Ingresos, egresos y saldo · próximos 12 meses</p>
+<div style="position: relative; height: 260px">
+<div style="position: absolute; inset: 0; display: flex; align-items: center; gap: 10px; padding: 0 6px">
+<div class="cf"><i class="b" style="height: 20%; --s: .4s"></i><i class="b n" style="height: 15%; --s: .45s"></i></div><div class="cf"><i class="b" style="height: 27%; --s: .45s"></i><i class="b n" style="height: 21%; --s: .5s"></i></div><div class="cf"><i class="b" style="height: 15%; --s: .5s"></i><i class="b n" style="height: 24%; --s: .55s"></i></div><div class="cf"><i class="b" style="height: 31%; --s: .55s"></i><i class="b n" style="height: 18%; --s: .6s"></i></div><div class="cf"><i class="b" style="height: 24%; --s: .6s"></i><i class="b n" style="height: 20%; --s: .65s"></i></div><div class="cf"><i class="b" style="height: 35%; --s: .65s"></i><i class="b n" style="height: 26%; --s: .7s"></i></div><div class="cf"><i class="b" style="height: 22%; --s: .7s"></i><i class="b n" style="height: 17%; --s: .75s"></i></div><div class="cf"><i class="b" style="height: 29%; --s: .75s"></i><i class="b n" style="height: 30%; --s: .8s"></i></div><div class="cf"><i class="b" style="height: 38%; --s: .8s"></i><i class="b n" style="height: 19%; --s: .85s"></i></div><div class="cf"><i class="b" style="height: 25%; --s: .85s"></i><i class="b n" style="height: 15%; --s: .9s"></i></div><div class="cf"><i class="b" style="height: 33%; --s: .9s"></i><i class="b n" style="height: 22%; --s: .95s"></i></div><div class="cf"><i class="b" style="height: 40%; --s: .95s"></i><i class="b n" style="height: 20%; --s: 1s"></i></div>
+</div>
+<div style="position: absolute; left: 0; right: 0; top: 50%; border-top: 1px dashed #BDB9B3"></div>
+<svg viewBox="0 0 600 260" preserveAspectRatio="none" style="position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible"><path class="ln" pathLength="1000" d="M20 150 L70 138 L120 160 L170 118 L220 112 L270 84 L320 78 L370 82 L420 52 L470 40 L520 30 L575 14" fill="none" stroke="#9C4A3A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" style="--s: .8s"></path></svg>
+</div>
+<div style="display: flex; gap: 16px; margin-top: 8px; font-size: 11px; color: #4A4A45"><span><i style="display: inline-block; width: 9px; height: 9px; border-radius: 2px; background: #595A34"></i> Ingresos</span><span><i style="display: inline-block; width: 9px; height: 9px; border-radius: 2px; background: #D8C9B0"></i> Egresos</span><span><i style="display: inline-block; width: 14px; height: 3px; border-radius: 2px; background: #9C4A3A; vertical-align: middle"></i> Saldo</span></div>
+</div>
+</div>
+<!-- 10 · Horas -->
+<div class="scr" style="--d: 27s">
+<p class="mk-cr">Horas del estudio · octubre</p><h4 class="mk-h">Cuánto deja cada proyecto</h4>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px">
+<div class="k a" style="--s: .1s"><small>Horas del mes</small><b>412 h</b><span>4 personas</span></div>
+<div class="k a" style="--s: .2s"><small>En proyectos</small><b>86%</b><span>14% interno</span></div>
+<div class="k a" style="--s: .3s"><small>Valor real de la hora</small><b>$ 38.400</b><span>promedio del estudio</span></div>
+</div>
+<div class="c a" style="--s: .3s; margin-top: 10px"><p class="t">Honorarios contra horas trabajadas</p>
+<div class="hp a" style="--s: .4s"><span>Casa Carmelo</span><div class="pista" style="height: 20px"><i class="bh" style="width: 78%; --s: .5s"></i><em style="left: 52%"></em></div><b style="color: #595A34">$ 46.200 / h</b></div>
+<div class="hp a" style="--s: .5s"><span>Edificio Moreno</span><div class="pista" style="height: 20px"><i class="bh" style="width: 92%; --s: .6s"></i><em style="left: 70%"></em></div><b style="color: #595A34">$ 41.800 / h</b></div>
+<div class="hp a" style="--s: .6s"><span>Remodelación Lezica</span><div class="pista" style="height: 20px"><i class="bh" style="width: 64%; --s: .7s; background: #A7AC5F"></i><em style="left: 66%"></em></div><b>$ 29.900 / h</b></div>
+<div class="hp a" style="--s: .7s"><span>Local Güemes</span><div class="pista" style="height: 20px"><i class="bh" style="width: 40%; --s: .8s; background: #9C4A3A"></i><em style="left: 58%"></em></div><b style="color: #9C4A3A">$ 18.300 / h</b></div>
+<div class="hp a" style="--s: .8s"><span>Casa del Bosque</span><div class="pista" style="height: 20px"><i class="bh" style="width: 22%; --s: .9s; background: #A7AC5F"></i><em style="left: 20%"></em></div><b>$ 35.100 / h</b></div>
+<p style="margin: 10px 0 0; color: #6A6A63; font-size: 11px">Barra: honorarios cobrados · marca: costo de las horas cargadas</p>
+</div>
+</div>
+<!-- 11 · Marketing -->
+<div class="scr" style="--d: 30s">
+<p class="mk-cr">Marketing · últimos 3 meses</p><h4 class="mk-h">De la consulta a la obra</h4>
+<div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 10px">
+<div class="c a" style="--s: .2s"><p class="t">Embudo de consultas</p>
+<div class="emb"><i class="bh" style="width: 100%; --s: .3s"><b class="cnt" style="--to: 42"></b> consultas</i></div>
+<div class="emb"><i class="bh" style="width: 72%; --s: .45s; background: #6E6F45"><b class="cnt" style="--to: 18"></b> reuniones</i></div>
+<div class="emb"><i class="bh" style="width: 50%; --s: .6s; background: #8C8E55"><b class="cnt" style="--to: 11"></b> presupuestadas</i></div>
+<div class="emb"><i class="bh" style="width: 30%; --s: .75s; background: #A7AC5F; color: #222"><b class="cnt" style="--to: 5"></b> ganadas</i></div>
+<p style="margin: 12px 0 0; color: #4A4A45">Contratado: <b style="color: #595A34">$ 96,4 M</b> · 12% de conversión</p>
+</div>
+<div class="c a" style="--s: .3s"><p class="t">Qué trae cada canal</p>
+<div class="fila" style="grid-template-columns: 80px 1fr 46px"><span>Referidos</span><div class="pista"><i class="bh" style="width: 88%; --s: .5s"></i></div><b>3</b></div>
+<div class="fila" style="grid-template-columns: 80px 1fr 46px"><span>Instagram</span><div class="pista"><i class="bh" style="width: 54%; --s: .6s; background: #A7AC5F"></i></div><b>1</b></div>
+<div class="fila" style="grid-template-columns: 80px 1fr 46px"><span>Web</span><div class="pista"><i class="bh" style="width: 30%; --s: .7s; background: #D8C9B0"></i></div><b>1</b></div>
+<div class="fila" style="grid-template-columns: 80px 1fr 46px"><span>Cartel de obra</span><div class="pista"><i class="bh" style="width: 18%; --s: .8s; background: #D8C9B0"></i></div><b>0</b></div>
+<p class="t" style="margin-top: 14px">Próximos posteos</p>
+<div class="tk a" style="--s: .8s"><i style="background: #595A34"></i>Avance Casa Carmelo · vie 16</div>
+<div class="tk a" style="--s: .9s"><i style="background: #A7AC5F"></i>Antes y después · Lezica · mar 20</div>
+<div class="tk a" style="--s: 1s"><i style="background: #D8C9B0"></i>Render Casa del Bosque · jue 22</div>
+</div>
+</div>
+</div>
+<!-- 12 · Índices -->
+<div class="scr" style="--d: 33s">
+<p class="mk-cr">Índices · CAC, dólar, inflación y costo del m²</p><h4 class="mk-h">Los números del mes, al día</h4>
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px">
+<div class="k a" style="--s: .1s"><small>CAC · agosto 2026</small><b>22.945,2</b><span>+4,5% en el mes</span></div>
+<div class="k a" style="--s: .2s"><small>Dólar oficial</small><b>$ 1.535</b><span>BNA · vendedor</span></div>
+<div class="k a" style="--s: .3s"><small>Inflación</small><b>+1,7%</b><span>septiembre · INDEC</span></div>
+<div class="k a" style="--s: .4s"><small>Costo del m²</small><b>$ 3.212.658</b><span>casa tradicional</span></div>
+</div>
+<div class="c a" style="--s: .3s; margin-top: 10px"><p class="t">Índice CAC · últimos 12 meses</p>
+<svg viewBox="0 0 600 240" preserveAspectRatio="none" style="width: 100%; height: 250px; display: block; overflow: visible">
+<path d="M0 60H600M0 120H600M0 180H600" stroke="#E8E4DC" stroke-width="1" vector-effect="non-scaling-stroke"></path>
+<path class="ln" pathLength="1000" d="M10 210 L60 202 L110 196 L160 188 L210 176 L260 170 L310 158 L360 146 L410 128 L460 110 L510 92 L560 70 L590 46" fill="none" stroke="#595A34" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" style="--s: .4s"></path>
+<path class="ln" pathLength="1000" d="M10 214 L60 208 L110 205 L160 196 L210 190 L260 182 L310 175 L360 166 L410 152 L460 140 L510 128 L560 112 L590 98" fill="none" stroke="#D8C9B0" stroke-width="2.5" stroke-dasharray="1000" stroke-linecap="round" vector-effect="non-scaling-stroke" style="--s: .7s"></path>
+</svg>
+<div style="display: flex; gap: 16px; font-size: 11px; color: #4A4A45"><span><i style="display: inline-block; width: 14px; height: 3px; background: #595A34; vertical-align: middle"></i> CAC general</span><span><i style="display: inline-block; width: 14px; height: 3px; background: #D8C9B0; vertical-align: middle"></i> Mano de obra UOCRA</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</header>
+<section style="padding: 196px 0 40px; text-align: center">
+<p class="revela" style="margin: 0 auto; padding: 0 32px; max-width: 900px; font-size: clamp(22px, 2.6vw, 32px); line-height: 1.35; font-weight: 500; letter-spacing: -0.01em; color: #2E2E2A">Hecho en Argentina, por arquitectos, para arquitectos.</p>
+<div class="cinta-box" style="margin-top: 36px; overflow: hidden; border-top: 1px solid #D6D2CA; border-bottom: 1px solid #D6D2CA; padding: 18px 0; mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent)">
+<div class="cinta" style="font-family: 'Hanken Grotesk', sans-serif; font-size: 18px; font-weight: 600; color: #595A34">
+<span style="padding: 0 28px">Proyectos</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Presupuestos</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Compras</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Proveedores</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Clientes</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Finanzas</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Marketing</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Recursos humanos</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Horas del estudio</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Cobros</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Certificados</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Cómputos</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Agenda semanal</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Tareas</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Mails</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Reuniones</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Bitácora de obra</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Índices</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Informes</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Postventa</span><span style="color: #BDB9B3">●</span>
+<span style="padding: 0 28px">Proyectos</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Presupuestos</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Compras</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Proveedores</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Clientes</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Finanzas</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Marketing</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Recursos humanos</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Horas del estudio</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Cobros</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Certificados</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Cómputos</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Agenda semanal</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Tareas</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Mails</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Reuniones</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Bitácora de obra</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Índices</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Informes</span><span style="color: #BDB9B3">●</span><span style="padding: 0 28px">Postventa</span><span style="color: #BDB9B3">●</span>
+</div>
+</div>
+</section>
+<!-- ======================== los dolores del estudio -->
+<section id="dolores" style="border-top: 1px solid #D6D2CA; background-color: var(--surface-100, #f4f1eb)">
+<div style="max-width: 1240px; margin: 0 auto; padding: 72px 32px 80px">
+<div class="revela" style="max-width: 860px; margin: 0 auto 32px; text-align: center">
+<h2 style="margin: 0 0 14px; font-family: 'Hanken Grotesk', sans-serif; font-weight: 700; font-size: clamp(32px, 4vw, 52px); line-height: 1.06; letter-spacing: -0.02em; color: #595A34">¿Por qué nuestros clientes eligen Astor?</h2>
+<p style="margin: 0; color: #4A4A45; font-size: 18px">No es falta de trabajo ni de capacidad. Es que todo está desparramado y todo depende de vos.</p>
+</div>
+<div class="dol-grid" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px">
+<div class="revela" style="display: flex; flex-direction: column; gap: 0">
+<span style="position: relative; z-index: 1; align-self: center; margin-bottom: -13px; font-family: 'Hanken Grotesk', sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 0.16em; text-transform: uppercase; color: #8E4632; background: linear-gradient(rgba(181,101,79,0.18), rgba(181,101,79,0.18)), #FFFFFF; border-radius: 6px; padding: 6px 12px">Margen</span>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 12px; background: #FFFFFF; border: 1px solid #D6D2CA; border-radius: 16px; padding: 20px 20px 18px; box-shadow: 0 22px 44px -32px rgba(34,34,34,.5)">
+<p style="margin: 0; font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 17px; line-height: 1.35; color: #222222"><span aria-hidden="true" style="display: block; font-family: 'Hanken Grotesk', sans-serif; font-style: normal; font-weight: 700; font-size: 30px; line-height: .6; color: #B5654F">“</span>Termino la obra, hago números y el margen no está. Y no sé dónde se fue.</p>
+<div style="margin-top: auto; border-top: 1px solid #EEEAE1; padding-top: 10px; font-family: 'Hanken Grotesk', sans-serif">
+<p style="margin: 0 0 3px; font-size: 10.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #595A34">Con Astor</p>
+<p style="margin: 0; font-size: 13.5px; line-height: 1.4; color: #5E5E58">Gastado contra presupuestado, rubro por rubro y al día.</p>
+</div>
+</div>
+</div>
+<div class="revela" style="display: flex; flex-direction: column; gap: 0">
+<span style="position: relative; z-index: 1; align-self: center; margin-bottom: -13px; font-family: 'Hanken Grotesk', sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 0.16em; text-transform: uppercase; color: #8E4632; background: linear-gradient(rgba(181,101,79,0.18), rgba(181,101,79,0.18)), #FFFFFF; border-radius: 6px; padding: 6px 12px">Orden</span>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 12px; background: #FFFFFF; border: 1px solid #D6D2CA; border-radius: 16px; padding: 20px 20px 18px; box-shadow: 0 22px 44px -32px rgba(34,34,34,.5)">
+<p style="margin: 0; font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 17px; line-height: 1.35; color: #222222"><span aria-hidden="true" style="display: block; font-family: 'Hanken Grotesk', sans-serif; font-style: normal; font-weight: 700; font-size: 30px; line-height: .6; color: #B5654F">“</span>Para saber cuánto llevo gastado busco media hora entre WhatsApp, mails y planillas.</p>
+<div style="margin-top: auto; border-top: 1px solid #EEEAE1; padding-top: 10px; font-family: 'Hanken Grotesk', sans-serif">
+<p style="margin: 0 0 3px; font-size: 10.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #595A34">Con Astor</p>
+<p style="margin: 0; font-size: 13.5px; line-height: 1.4; color: #5E5E58">Cada obra en una pantalla. La respuesta, en un clic.</p>
+</div>
+</div>
+</div>
+<div class="revela" style="display: flex; flex-direction: column; gap: 0">
+<span style="position: relative; z-index: 1; align-self: center; margin-bottom: -13px; font-family: 'Hanken Grotesk', sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 0.16em; text-transform: uppercase; color: #8E4632; background: linear-gradient(rgba(181,101,79,0.18), rgba(181,101,79,0.18)), #FFFFFF; border-radius: 6px; padding: 6px 12px">Presupuestos</span>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 12px; background: #FFFFFF; border: 1px solid #D6D2CA; border-radius: 16px; padding: 20px 20px 18px; box-shadow: 0 22px 44px -32px rgba(34,34,34,.5)">
+<p style="margin: 0; font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 17px; line-height: 1.35; color: #222222"><span aria-hidden="true" style="display: block; font-family: 'Hanken Grotesk', sans-serif; font-style: normal; font-weight: 700; font-size: 30px; line-height: .6; color: #B5654F">“</span>Presupuesto rápido y con miedo: ¿me quedé corto o me pasé?</p>
+<div style="margin-top: auto; border-top: 1px solid #EEEAE1; padding-top: 10px; font-family: 'Hanken Grotesk', sans-serif">
+<p style="margin: 0 0 3px; font-size: 10.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #595A34">Con Astor</p>
+<p style="margin: 0; font-size: 13.5px; line-height: 1.4; color: #5E5E58">Precios de tus propios análisis, al día con CAC y UOCRA.</p>
+</div>
+</div>
+</div>
+<div class="revela" style="display: flex; flex-direction: column; gap: 0">
+<span style="position: relative; z-index: 1; align-self: center; margin-bottom: -13px; font-family: 'Hanken Grotesk', sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 0.16em; text-transform: uppercase; color: #8E4632; background: linear-gradient(rgba(181,101,79,0.18), rgba(181,101,79,0.18)), #FFFFFF; border-radius: 6px; padding: 6px 12px">Tecnología</span>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 12px; background: #FFFFFF; border: 1px solid #D6D2CA; border-radius: 16px; padding: 20px 20px 18px; box-shadow: 0 22px 44px -32px rgba(34,34,34,.5)">
+<p style="margin: 0; font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 17px; line-height: 1.35; color: #222222"><span aria-hidden="true" style="display: block; font-family: 'Hanken Grotesk', sans-serif; font-style: normal; font-weight: 700; font-size: 30px; line-height: .6; color: #B5654F">“</span>Sé que el estudio tiene que sumar BIM e IA, pero no sé por dónde arrancar.</p>
+<div style="margin-top: auto; border-top: 1px solid #EEEAE1; padding-top: 10px; font-family: 'Hanken Grotesk', sans-serif">
+<p style="margin: 0 0 3px; font-size: 10.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #595A34">Con Astor</p>
+<p style="margin: 0; font-size: 13.5px; line-height: 1.4; color: #5E5E58">Cómputos y presupuestos en BIM, con un agente de IA integrado.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ======================== la plata que se pierde -->
+<section id="plata" class="plata-pista" style="background: #222222; color: #F4F1EB">
+<div style="max-width: 1240px; margin: 0 auto; padding: 96px 32px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+<div class="revela" style="flex: 1 1 380px; min-width: 0">
+<p style="margin: 0 0 12px; font-family: 'Hanken Grotesk', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #E0A493">El margen que no se ve</p>
+<h2 style="margin: 0 0 18px; font-family: 'Hanken Grotesk', sans-serif; font-weight: 700; font-size: clamp(36px, 4.6vw, 62px); line-height: 1.02; letter-spacing: -0.025em">¿Sabés cuánto ganaste en tu última obra?</h2>
+<p style="margin: 0; color: #DCD8CF; max-width: 480px; font-size: 19px">La mayoría de los estudios se entera cuando la obra ya terminó. Adiós a los desvíos de presupuesto.</p>
+</div>
+<div class="revela" style="flex: 1 1 520px; min-width: 0; font-family: 'Hanken Grotesk', sans-serif">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 10px">
+<span style="font-size: 14px; color: #BDB9B3">Ganancia prevista de una obra de $ 346 M</span>
+<b style="font-size: 18px">$ 32.000.000</b>
+</div>
+<div aria-hidden="true" class="pr-bar" data-golpe style="position: relative; height: 64px; border-radius: 12px; overflow: hidden; background: #8E9450">
+<i class="seg sg1" data-seg="1" style="position: absolute; top: 0; bottom: 0; right: 0.0%; width: 21.9%; background: #34342F; border-left: 1px dashed rgba(244,241,235,.18); display: flex; align-items: center; justify-content: center; font-style: normal; font-weight: 700; font-size: 14px; color: #6E6B64">1</i><i class="seg sg2" data-seg="2" style="position: absolute; top: 0; bottom: 0; right: 21.9%; width: 15.6%; background: #34342F; border-left: 1px dashed rgba(244,241,235,.18); display: flex; align-items: center; justify-content: center; font-style: normal; font-weight: 700; font-size: 14px; color: #6E6B64">2</i><i class="seg sg3" data-seg="3" style="position: absolute; top: 0; bottom: 0; right: 37.5%; width: 10.9%; background: #34342F; border-left: 1px dashed rgba(244,241,235,.18); display: flex; align-items: center; justify-content: center; font-style: normal; font-weight: 700; font-size: 14px; color: #6E6B64">3</i><i class="seg sg4" data-seg="4" style="position: absolute; top: 0; bottom: 0; right: 48.4%; width: 7.8%; background: #34342F; border-left: 1px dashed rgba(244,241,235,.18); display: flex; align-items: center; justify-content: center; font-style: normal; font-weight: 700; font-size: 14px; color: #6E6B64">4</i>
+</div>
+<div style="margin-top: 18px">
+<div class="pr-row" data-seg="1" style="border-bottom: 1px solid rgba(244,241,235,.1); display: grid; grid-template-columns: 26px 1fr auto; gap: 12px; align-items: center; padding: 10px 6px; min-height: 44px"><span style="width: 26px; height: 26px; border-radius: 7px; background: #B5654F; color: #F4F1EB; display: grid; place-items: center; font-weight: 700; font-size: 13px">1</span><span><b style="font-size: 15px">Error en el cómputo</b> <span style="color: #BDB9B3; font-size: 13px">· Faltaron metros de pared, revoque y contrapiso</span></span><span style="display: flex; flex-direction: column; align-items: flex-end"><b class="pr-amt" style="color: #E0A493; font-size: 15px; white-space: nowrap">− $ 7.000.000</b></span></div><div class="pr-row" data-seg="2" style="border-bottom: 1px solid rgba(244,241,235,.1); display: grid; grid-template-columns: 26px 1fr auto; gap: 12px; align-items: center; padding: 10px 6px; min-height: 44px"><span style="width: 26px; height: 26px; border-radius: 7px; background: #A0523D; color: #F4F1EB; display: grid; place-items: center; font-weight: 700; font-size: 13px">2</span><span><b style="font-size: 15px">La mano de obra rindió menos</b> <span style="color: #BDB9B3; font-size: 13px">· La cuadrilla tardó un 20% más de lo presupuestado en mampostería y revoques</span></span><span style="display: flex; flex-direction: column; align-items: flex-end"><b class="pr-amt" style="color: #E0A493; font-size: 15px; white-space: nowrap">− $ 5.000.000</b></span></div><div class="pr-row" data-seg="3" style="border-bottom: 1px solid rgba(244,241,235,.1); display: grid; grid-template-columns: 26px 1fr auto; gap: 12px; align-items: center; padding: 10px 6px; min-height: 44px"><span style="width: 26px; height: 26px; border-radius: 7px; background: #C07A5F; color: #F4F1EB; display: grid; place-items: center; font-weight: 700; font-size: 13px">3</span><span><b style="font-size: 15px">Adicionales que no se cobraron</b> <span style="color: #BDB9B3; font-size: 13px">· El cliente pidió cambios, se hicieron y nunca se presupuestaron</span></span><span style="display: flex; flex-direction: column; align-items: flex-end"><b class="pr-amt" style="color: #E0A493; font-size: 15px; white-space: nowrap">− $ 3.500.000</b></span></div><div class="pr-row" data-seg="4" style="border-bottom: 1px solid rgba(244,241,235,.1); display: grid; grid-template-columns: 26px 1fr auto; gap: 12px; align-items: center; padding: 10px 6px; min-height: 44px"><span style="width: 26px; height: 26px; border-radius: 7px; background: #8E4632; color: #F4F1EB; display: grid; place-items: center; font-weight: 700; font-size: 13px">4</span><span><b style="font-size: 15px">Gastos en materiales</b> <span style="color: #BDB9B3; font-size: 13px">· Se compró a último momento, de más y fuera de precio</span></span><span style="display: flex; flex-direction: column; align-items: flex-end"><b class="pr-amt" style="color: #E0A493; font-size: 15px; white-space: nowrap">− $ 2.500.000</b></span></div>
+</div>
+<div style="margin-top: 18px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px"><span style="color: #DCD8CF; font-size: 16px"><span id="restoTxt">Ganancia que esperás</span></span><b class="pr-num" data-golpe id="resto" style="font-size: clamp(34px, 4vw, 48px); color: #B9BE6E; letter-spacing: -0.02em; font-variant-numeric: tabular-nums">$ 32.000.000</b></div>
+</div>
+</div>
+</section>
+<section id="que-hace" style="background: #E8E4DC">
+<div style="max-width: 1240px; margin: 0 auto; padding: 96px 32px">
+<div class="revela" style="max-width: 820px; margin: 0 0 40px">
+<p style="margin: 0 0 12px; font-family: 'Hanken Grotesk', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #595A34">Qué hace Astor</p>
+<h2 style="margin: 0; font-family: 'Hanken Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.08; letter-spacing: -0.015em">Lo que hoy está en diez lugares y en tu cabeza, ahora está en uno.</h2>
+</div>
+<div class="qv revela" style="display: flex; flex-direction: column; gap: 28px">
+<div class="qv-box" style="min-width: 0; display: flex; justify-content: center; align-items: center; padding: 56px 32px; border-radius: 6px; background-color: #EFECE5; overflow: hidden">
+<div class="qz">
+<div class="mk" style="width: 900px; border-radius: 16px; overflow: hidden; box-shadow: 0 40px 80px -40px rgba(34,34,34,0.55); border: 1px solid #D6D2CA; background: #F4F1EB; text-align: left; font-family: 'Hanken Grotesk', sans-serif; font-size: 12px; line-height: 1.35; color: #222222">
+<div style="display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 14px; background: #2E2F1D; color: rgba(244,241,235,.75); font-size: 12px">
+<span style="width: 10px; height: 10px; border-radius: 50%; background: #9C4A3A"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #D8C9B0"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #A7AC5F"></span>
+<span style="flex: 1; text-align: center">Astor Estudio</span><span style="width: 46px"></span>
+</div>
+<div style="position: relative; height: 600px; overflow: hidden">
+<div class="scr qs1" data-qv="1">
+<p class="mk-cr">Presupuestos · con tus análisis de precio</p>
+<div style="display: flex; align-items: flex-end; justify-content: space-between"><h4 class="mk-h" style="margin: 0">Casa Carmelo · v3</h4><div class="a" style="--s: .2s; text-align: right"><small style="color: #6A6A63">Precio al cliente</small><br><b style="font-size: 26px; color: #595A34">$ 25.777.646</b></div></div>
+<div style="display: flex; gap: 6px; margin: 10px 0"><span class="chip">CAC agosto 2026 · 22.945,2</span><span class="chip">Escala UOCRA vigente</span><span class="chip">Tipo: casa</span><span class="chip" style="background: #595A34; color: #F4F1EB">Congelado</span></div>
+<div class="c a" style="--s: .2s; padding: 0; overflow: hidden">
+<div class="tr th"><span>Rubro</span><span>Incidencia</span><span style="text-align: right">Subtotal</span></div>
+<div class="tr a" style="--s: .3s"><span>01 · Trabajos preliminares</span><div class="pista"><i class="bh" style="width: 22%; --s: .5s"></i></div><span>$ 1.212.750</span></div>
+<div class="tr a" style="--s: .35s"><span>02 · Estructura resistente</span><div class="pista"><i class="bh" style="width: 86%; --s: .55s"></i></div><span>$ 6.186.635</span></div>
+<div class="tr a" style="--s: .4s"><span>03 · Albañilería</span><div class="pista"><i class="bh" style="width: 65%; --s: .6s"></i></div><span>$ 4.639.976</span></div>
+<div class="tr a" style="--s: .45s"><span>04 · Revoques</span><div class="pista"><i class="bh" style="width: 32%; --s: .65s"></i></div><span>$ 2.319.988</span></div>
+<div class="tr a" style="--s: .5s"><span>05 · Pisos y zócalos</span><div class="pista"><i class="bh" style="width: 43%; --s: .7s"></i></div><span>$ 3.093.317</span></div>
+<div class="tr a" style="--s: .55s"><span>06 · Instalación sanitaria</span><div class="pista"><i class="bh" style="width: 29%; --s: .75s"></i></div><span>$ 2.062.211</span></div>
+<div class="tr a" style="--s: .6s"><span>07 · Instalación eléctrica</span><div class="pista"><i class="bh" style="width: 25%; --s: .8s"></i></div><span>$ 1.804.435</span></div>
+<div class="tr a" style="--s: .65s"><span>08 · Carpinterías</span><div class="pista"><i class="bh" style="width: 40%; --s: .85s"></i></div><span>$ 2.835.541</span></div>
+<div class="tr a" style="--s: .7s"><span>09 · Pintura y terminaciones</span><div class="pista"><i class="bh" style="width: 18%; --s: .9s"></i></div><span>$ 1.622.793</span></div>
+</div>
+</div>
+<div class="scr qs2" data-qv="2">
+<p class="mk-cr">Proyectos · Anteproyecto · Balneario Zagarzazu</p>
+<div style="display: flex; align-items: center; gap: 10px"><span style="background: #595A34; color: #F4F1EB; border-radius: 6px; padding: 2px 7px; font-weight: 700">CC</span><h4 class="mk-h" style="margin: 0">Casa Carmelo</h4></div>
+<div style="display: flex; gap: 6px; margin: 12px 0"><span class="pl">Seguimiento</span><span class="pl on">Económico</span><span class="pl">Ejecución</span><span class="pl">Análisis</span><span style="flex: 1"></span><span class="pl">Informes ▾</span></div>
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px">
+<div class="k a" style="--s: .1s"><small>Presupuestado</small><b>$ 25,7 M</b><span>v3 · CAC agosto 2026</span></div>
+<div class="k a" style="--s: .2s"><small>Gastado</small><b>$ 14,2 M</b><span>55% del presupuesto</span></div>
+<div class="k a" style="--s: .3s"><small>Avance</small><b>61%</b><span>al día con el plan</span></div>
+<div class="k a" style="--s: .4s"><small>Desvío</small><b style="color: #9C4A3A">+2,1%</b><span>mampostería arriba</span></div>
+</div>
+<div class="c a" style="--s: .3s; margin-top: 10px"><p class="t">Presupuesto contra real, por rubro</p>
+<div style="display: flex; align-items: flex-end; gap: 22px; height: 230px; padding: 0 6px; border-bottom: 1px solid #D6D2CA">
+<div class="gb"><i class="b" style="height: 60%; --s: .4s"></i><i class="b r" style="height: 58%; --s: .5s"></i></div>
+<div class="gb"><i class="b" style="height: 88%; --s: .5s"></i><i class="b r" style="height: 95%; --s: .6s; background: #9C4A3A"></i></div>
+<div class="gb"><i class="b" style="height: 72%; --s: .6s"></i><i class="b r" style="height: 66%; --s: .7s"></i></div>
+<div class="gb"><i class="b" style="height: 45%; --s: .7s"></i><i class="b r" style="height: 30%; --s: .8s"></i></div>
+<div class="gb"><i class="b" style="height: 52%; --s: .8s"></i><i class="b r" style="height: 18%; --s: .9s"></i></div>
+<div class="gb"><i class="b" style="height: 38%; --s: .9s"></i><i class="b r" style="height: 8%; --s: 1s"></i></div>
+<div class="gb"><i class="b" style="height: 64%; --s: 1s"></i><i class="b r" style="height: 4%; --s: 1.1s"></i></div>
+<div class="gb"><i class="b" style="height: 30%; --s: 1.1s"></i><i class="b r" style="height: 0%; --s: 1.2s"></i></div>
+</div>
+<div style="display: flex; gap: 22px; padding: 6px 6px 0; color: #6A6A63; font-size: 10.5px"><span class="gl">Estructura</span><span class="gl">Mampostería</span><span class="gl">Pisos</span><span class="gl">Instalaciones</span><span class="gl">Revoques</span><span class="gl">Carpinterías</span><span class="gl">Terminaciones</span><span class="gl">Exteriores</span></div>
+<div style="display: flex; gap: 16px; margin-top: 10px; font-size: 11px; color: #4A4A45"><span><i style="display: inline-block; width: 9px; height: 9px; border-radius: 2px; background: #D6D2CA"></i> Presupuestado</span><span><i style="display: inline-block; width: 9px; height: 9px; border-radius: 2px; background: #595A34"></i> Real</span></div>
+</div>
+</div>
+<div class="scr qs3" data-qv="3">
+<p class="mk-cr">Compras · todas las obras</p><h4 class="mk-h">Qué hay que pedir esta semana</h4>
+<div style="display: grid; grid-template-columns: 1.55fr 1fr; gap: 10px">
+<div class="c a" style="--s: .2s; padding: 0; overflow: hidden">
+<div class="tr th" style="grid-template-columns: 1.6fr .6fr .8fr .8fr"><span>Material</span><span>Obra</span><span>Para el</span><span>Estado</span></div>
+<div class="tr a" style="--s: .3s; grid-template-columns: 1.6fr .6fr .8fr .8fr"><span>Cemento × 40 bolsas</span><span>CC</span><span>15/10</span><span class="st ok">Pedido</span></div>
+<div class="tr a" style="--s: .4s; grid-template-columns: 1.6fr .6fr .8fr .8fr"><span>Hierro Ø8 × 60 barras</span><span>MO</span><span>14/10</span><span class="st ok">Recibido</span></div>
+<div class="tr a" style="--s: .5s; grid-template-columns: 1.6fr .6fr .8fr .8fr"><span>Porcelanato 60×60 · 48 m²</span><span>LZ</span><span>20/10</span><span class="st pe">A pedir</span></div>
+<div class="tr a" style="--s: .6s; grid-template-columns: 1.6fr .6fr .8fr .8fr"><span>Ladrillo hueco 12 × 1.800</span><span>CC</span><span>17/10</span><span class="st pe">A pedir</span></div>
+<div class="tr a" style="--s: .7s; grid-template-columns: 1.6fr .6fr .8fr .8fr"><span>Caño PPN 110 × 12</span><span>GU</span><span>22/10</span><span class="st co">Cotizando</span></div>
+<div class="tr a" style="--s: .8s; grid-template-columns: 1.6fr .6fr .8fr .8fr"><span>Andamio tubular · alquiler</span><span>MO</span><span>vence 16/10</span><span class="st al">Devolver</span></div>
+<div class="tr a" style="--s: .9s; grid-template-columns: 1.6fr .6fr .8fr .8fr"><span>Arena gruesa · 6 m³</span><span>CC</span><span>15/10</span><span class="st ok">Pedido</span></div>
+</div>
+<div class="c a" style="--s: .3s"><p class="t">Gastado por rubro · octubre</p>
+<div style="display: flex; justify-content: center; margin: 8px 0 12px">
+<svg width="170" height="170" viewBox="0 0 36 36">
+<circle cx="18" cy="18" r="15.9" fill="none" stroke="#E8E4DC" stroke-width="5"></circle>
+<circle class="dona" cx="18" cy="18" r="15.9" fill="none" stroke="#595A34" stroke-width="5" transform="rotate(-90 18 18)" style="--v: 42"></circle>
+<circle class="dona" cx="18" cy="18" r="15.9" fill="none" stroke="#A7AC5F" stroke-width="5" transform="rotate(61 18 18)" style="--v: 26; --s: .2s"></circle>
+<circle class="dona" cx="18" cy="18" r="15.9" fill="none" stroke="#D8C9B0" stroke-width="5" transform="rotate(155 18 18)" style="--v: 19; --s: .4s"></circle>
+<circle class="dona" cx="18" cy="18" r="15.9" fill="none" stroke="#9C4A3A" stroke-width="5" transform="rotate(223 18 18)" style="--v: 13; --s: .6s"></circle>
+<text x="18" y="17.5" text-anchor="middle" font-size="4.2" font-weight="700" fill="#222">$ 9,8 M</text><text x="18" y="22" text-anchor="middle" font-size="2.6" fill="#6A6A63">este mes</text>
+</svg></div>
+<div class="ley"><i style="background: #595A34"></i>Estructura<b>42%</b></div><div class="ley"><i style="background: #A7AC5F"></i>Albañilería<b>26%</b></div><div class="ley"><i style="background: #D8C9B0"></i>Instalaciones<b>19%</b></div><div class="ley"><i style="background: #9C4A3A"></i>Alquileres<b>13%</b></div>
+</div>
+</div>
+</div>
+<div class="scr qs4" data-qv="4">
+<p class="mk-cr">Clientes · cobros y certificados</p><h4 class="mk-h">Qué te deben y qué cobraste</h4>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px">
+<div class="k a" style="--s: .1s"><small>Cobrado en el año</small><b>$ 61,3 M</b><span>CAC ajustado</span></div>
+<div class="k a" style="--s: .2s"><small>Pendiente</small><b>$ 7,7 M</b><span>3 certificados</span></div>
+<div class="k a" style="--s: .3s"><small>Vencido</small><b style="color: #9C4A3A">$ 1,0 M</b><span>Lezica · hace 6 días</span></div>
+</div>
+<div class="c a" style="--s: .3s; margin-top: 10px"><p class="t">Cobros por mes</p>
+<div style="display: flex; align-items: flex-end; gap: 16px; height: 250px; border-bottom: 1px solid #D6D2CA; padding: 0 8px">
+<div class="mes"><i class="b" style="height: 34%; --s: .4s"></i></div><div class="mes"><i class="b" style="height: 52%; --s: .45s"></i></div><div class="mes"><i class="b" style="height: 46%; --s: .5s"></i></div><div class="mes"><i class="b" style="height: 70%; --s: .55s"></i></div><div class="mes"><i class="b" style="height: 61%; --s: .6s"></i></div><div class="mes"><i class="b" style="height: 82%; --s: .65s"></i></div><div class="mes"><i class="b" style="height: 75%; --s: .7s"></i></div><div class="mes"><i class="b" style="height: 90%; --s: .75s"></i></div><div class="mes"><i class="b" style="height: 68%; --s: .8s"></i></div><div class="mes"><i class="b" style="height: 40%; --s: .85s; background: #A7AC5F"></i><i class="b" style="height: 38%; --s: .9s; background: repeating-linear-gradient(45deg, #D8C9B0 0 4px, #EFE7D8 4px 8px)"></i></div>
+</div>
+<div style="display: flex; gap: 16px; padding: 6px 8px 0; color: #6A6A63; font-size: 10.5px"><span class="gl">ene</span><span class="gl">feb</span><span class="gl">mar</span><span class="gl">abr</span><span class="gl">may</span><span class="gl">jun</span><span class="gl">jul</span><span class="gl">ago</span><span class="gl">sep</span><span class="gl">oct</span></div>
+</div>
+</div>
+<div class="scr qs5" data-qv="5">
+<p class="mk-cr">Semana 42 · 12 — 18 de octubre</p><h4 class="mk-h">Tu semana</h4>
+<div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; height: 470px">
+<div class="dia"><small>LUN 12</small><i class="ev a" style="--s: .2s; height: 46px; background: #E3E4CF">Compra de hierro · CC</i><i class="ev a" style="--s: .5s; height: 70px; background: #595A34; color: #F4F1EB">Reunión de obra · Moreno</i></div>
+<div class="dia" style="background: #FFFFFF; border-color: #595A34"><small style="color: #595A34">MAR 13 · HOY</small><i class="ev a" style="--s: .3s; height: 40px; background: #F1DDD7; color: #7A3326">Pagar quincena</i><i class="ev a" style="--s: .6s; height: 60px; background: #595A34; color: #F4F1EB">Visita · Moreno</i><i class="ev a" style="--s: .9s; height: 40px; background: #EFE7D8">Pedido cerámicos</i></div>
+<div class="dia"><small>MIÉ 14</small><i class="ev a" style="--s: .4s; height: 84px; background: #E3E4CF">Hormigonado losa · Moreno</i><i class="ev a" style="--s: .8s; height: 36px; background: #EFE7D8">Llega volquete</i></div>
+<div class="dia"><small>JUE 15</small><i class="ev a" style="--s: .5s; height: 50px; background: #F1DDD7; color: #7A3326">Vence certificado 3</i><i class="ev a" style="--s: .9s; height: 64px; background: #595A34; color: #F4F1EB">Cliente · Lezica</i></div>
+<div class="dia"><small>VIE 16</small><i class="ev a" style="--s: .6s; height: 40px; background: #EFE7D8">Devolver andamio</i><i class="ev a" style="--s: 1s; height: 74px; background: #E3E4CF">Posteo: avance Carmelo</i></div>
+<div class="dia"><small>SÁB 17</small><i class="ev a" style="--s: .7s; height: 44px; background: #E3E4CF">Medición · Güemes</i></div>
+</div>
+</div>
+<div class="scr qs6" data-qv="6">
+<p class="mk-cr">Finanzas · pesos y dólares</p><h4 class="mk-h">Cash flow de todas las obras</h4>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px">
+<div class="k a" style="--s: .1s"><small>Saldo en cuentas</small><b>$ 12.480.300</b><span>US$ 4.120</span></div>
+<div class="k a" style="--s: .2s"><small>Por cobrar</small><b>$ 7.733.294</b><span>emitido sin cobrar</span></div>
+<div class="k a" style="--s: .3s"><small>Margen real</small><b>18,4%</b><span>sobre lo certificado</span></div>
+</div>
+<div class="c a" style="--s: .3s; margin-top: 10px"><p class="t">Ingresos, egresos y saldo · próximos 12 meses</p>
+<div style="position: relative; height: 260px">
+<div style="position: absolute; inset: 0; display: flex; align-items: center; gap: 10px; padding: 0 6px">
+<div class="cf"><i class="b" style="height: 20%; --s: .4s"></i><i class="b n" style="height: 15%; --s: .45s"></i></div><div class="cf"><i class="b" style="height: 27%; --s: .45s"></i><i class="b n" style="height: 21%; --s: .5s"></i></div><div class="cf"><i class="b" style="height: 15%; --s: .5s"></i><i class="b n" style="height: 24%; --s: .55s"></i></div><div class="cf"><i class="b" style="height: 31%; --s: .55s"></i><i class="b n" style="height: 18%; --s: .6s"></i></div><div class="cf"><i class="b" style="height: 24%; --s: .6s"></i><i class="b n" style="height: 20%; --s: .65s"></i></div><div class="cf"><i class="b" style="height: 35%; --s: .65s"></i><i class="b n" style="height: 26%; --s: .7s"></i></div><div class="cf"><i class="b" style="height: 22%; --s: .7s"></i><i class="b n" style="height: 17%; --s: .75s"></i></div><div class="cf"><i class="b" style="height: 29%; --s: .75s"></i><i class="b n" style="height: 30%; --s: .8s"></i></div><div class="cf"><i class="b" style="height: 38%; --s: .8s"></i><i class="b n" style="height: 19%; --s: .85s"></i></div><div class="cf"><i class="b" style="height: 25%; --s: .85s"></i><i class="b n" style="height: 15%; --s: .9s"></i></div><div class="cf"><i class="b" style="height: 33%; --s: .9s"></i><i class="b n" style="height: 22%; --s: .95s"></i></div><div class="cf"><i class="b" style="height: 40%; --s: .95s"></i><i class="b n" style="height: 20%; --s: 1s"></i></div>
+</div>
+<div style="position: absolute; left: 0; right: 0; top: 50%; border-top: 1px dashed #BDB9B3"></div>
+<svg viewBox="0 0 600 260" preserveAspectRatio="none" style="position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible"><path class="ln" pathLength="1000" d="M20 150 L70 138 L120 160 L170 118 L220 112 L270 84 L320 78 L370 82 L420 52 L470 40 L520 30 L575 14" fill="none" stroke="#9C4A3A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" style="--s: .8s"></path></svg>
+</div>
+<div style="display: flex; gap: 16px; margin-top: 8px; font-size: 11px; color: #4A4A45"><span><i style="display: inline-block; width: 9px; height: 9px; border-radius: 2px; background: #595A34"></i> Ingresos</span><span><i style="display: inline-block; width: 9px; height: 9px; border-radius: 2px; background: #D8C9B0"></i> Egresos</span><span><i style="display: inline-block; width: 14px; height: 3px; border-radius: 2px; background: #9C4A3A; vertical-align: middle"></i> Saldo</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="qv-tabs" role="group" aria-label="Partes de Astor" style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0 28px">
+<button type="button" class="qv-tab" data-qv="1" data-go="1" aria-pressed="false">
+<i class="qv-prog" aria-hidden="true"></i>
+<b style="font-family: 'Hanken Grotesk', sans-serif; font-size: 17px; font-weight: 600; color: #222222">Presupuestos</b>
+<span class="qv-sub" style="font-size: 14.5px; line-height: 1.45; color: #55554F">Generá presupuestos con tecnología BIM, con cada precio al día.</span>
+</button>
+<button type="button" class="qv-tab" data-qv="2" data-go="2" aria-pressed="false">
+<i class="qv-prog" aria-hidden="true"></i>
+<b style="font-family: 'Hanken Grotesk', sans-serif; font-size: 17px; font-weight: 600; color: #222222">Obra</b>
+<span class="qv-sub" style="font-size: 14.5px; line-height: 1.45; color: #55554F">Controlá tu obra desde el día cero: cronograma, avance y costos.</span>
+</button>
+<button type="button" class="qv-tab" data-qv="3" data-go="3" aria-pressed="false">
+<i class="qv-prog" aria-hidden="true"></i>
+<b style="font-family: 'Hanken Grotesk', sans-serif; font-size: 17px; font-weight: 600; color: #222222">Compras</b>
+<span class="qv-sub" style="font-size: 14.5px; line-height: 1.45; color: #55554F">Gestioná tus compras y proveedores con inteligencia artificial.</span>
+</button>
+<button type="button" class="qv-tab" data-qv="4" data-go="4" aria-pressed="false">
+<i class="qv-prog" aria-hidden="true"></i>
+<b style="font-family: 'Hanken Grotesk', sans-serif; font-size: 17px; font-weight: 600; color: #222222">Cobros</b>
+<span class="qv-sub" style="font-size: 14.5px; line-height: 1.45; color: #55554F">Llevá el control de tus cobros y certificados, siempre al día.</span>
+</button>
+<button type="button" class="qv-tab" data-qv="5" data-go="5" aria-pressed="false">
+<i class="qv-prog" aria-hidden="true"></i>
+<b style="font-family: 'Hanken Grotesk', sans-serif; font-size: 17px; font-weight: 600; color: #222222">Agenda</b>
+<span class="qv-sub" style="font-size: 14.5px; line-height: 1.45; color: #55554F">Tu secretario personal: tareas, reuniones y vencimientos de todas tus obras.</span>
+</button>
+<button type="button" class="qv-tab" data-qv="6" data-go="6" aria-pressed="false">
+<i class="qv-prog" aria-hidden="true"></i>
+<b style="font-family: 'Hanken Grotesk', sans-serif; font-size: 17px; font-weight: 600; color: #222222">Finanzas</b>
+<span class="qv-sub" style="font-size: 14.5px; line-height: 1.45; color: #55554F">La caja de todas tus obras: cuánto entra, cuánto sale y cuándo no alcanza.</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<div style="position: relative; z-index: 2; max-width: 1240px; margin: -64px auto; padding: 0 32px">
+<div class="revela noche" style="position: relative; overflow: hidden; background: #2E2F1D; border: 1px solid rgba(244,241,235,.14); box-shadow: 0 30px 60px -30px rgba(0,0,0,.6); color: #F4F1EB; border-radius: 16px; padding: 26px 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px">
+<div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none"><span class="est" style="left: 8%; top: 22%; --t: 0s"></span><span class="est" style="left: 18%; top: 70%; --t: 0.8s"></span><span class="est" style="left: 30%; top: 30%; --t: 1.6s"></span><span class="est" style="left: 62%; top: 18%; --t: 0.4s"></span><span class="est" style="left: 74%; top: 64%; --t: 1.2s"></span><span class="est" style="left: 88%; top: 30%; --t: 2s"></span><span class="est" style="left: 95%; top: 75%; --t: 0.6s"></span><span class="est" style="left: 46%; top: 80%; --t: 2.4s"></span></div>
+<svg class="luna" aria-hidden="true" width="48" height="48" viewBox="0 0 48 48" style="position: relative; flex: none"><path d="M31 6a18 18 0 1 0 11 30A15 15 0 0 1 31 6Z" fill="#D8C9B0"></path></svg>
+<div style="position: relative; flex: 1 1 320px; min-width: 0">
+<p style="margin: 0; font-family: 'Hanken Grotesk', sans-serif; font-weight: 700; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.15; letter-spacing: -0.01em">Con Astor, dormís tranquilo.</p>
+<p style="margin: 6px 0 0; color: #DCD8CF; font-size: 16px">Cada obra con sus números al día, los pagos en orden y lo de mañana ya agendado.</p>
+</div>
+</div>
+</div>
+<section style="background: #222222; color: #F4F1EB">
+<div style="max-width: 1240px; margin: 0 auto; padding: 96px 32px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+<div class="revela" style="flex: 1 1 400px; min-width: 0">
+<p style="margin: 0 0 12px; font-family: 'Hanken Grotesk', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #D8C9B0">Asistente con IA</p>
+<h2 style="margin: 0 0 16px; font-family: 'Hanken Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.08; letter-spacing: -0.015em">¿Tu estudio ya trabaja con inteligencia artificial?</h2>
+<p style="margin: 0 0 28px; color: #DCD8CF">Preguntale a Astor por cualquier obra y te responde al instante, desde la web o por WhatsApp.</p>
+<ul style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px">
+<li style="border-top: 1px solid rgba(244,241,235,0.25); padding-top: 12px"><b style="font-family: 'Hanken Grotesk', sans-serif; font-size: 17px">Respuestas al instante</b><br><span style="color: #DCD8CF; font-size: 15.5px">Cantidades, costos y plazos de cada obra.</span></li>
+<li style="border-top: 1px solid rgba(244,241,235,0.25); padding-top: 12px"><b style="font-family: 'Hanken Grotesk', sans-serif; font-size: 17px">Facturas cargadas solas</b><br><span style="color: #DCD8CF; font-size: 15.5px">Mandás la foto y queda imputada a la obra.</span></li>
+<li style="border-top: 1px solid rgba(244,241,235,0.25); padding-top: 12px"><b style="font-family: 'Hanken Grotesk', sans-serif; font-size: 17px">Minutas y tareas</b><br><span style="color: #DCD8CF; font-size: 15.5px">Salen solas de tus mails y reuniones.</span></li>
+<li style="border-top: 1px solid rgba(244,241,235,0.25); padding-top: 12px"><b style="font-family: 'Hanken Grotesk', sans-serif; font-size: 17px">Alertas a tiempo</b><br><span style="color: #DCD8CF; font-size: 15.5px">Te avisa antes de que algo se desvíe.</span></li>
+</ul>
+</div>
+<div class="revela" style="flex: 1 1 420px; min-width: 0; display: flex; justify-content: center">
+<div class="ia-comp" style="position: relative; width: 100%; max-width: 560px; min-height: 507px; display: flex; align-items: center; justify-content: center">
+<div class="mano-foto" style="position: relative; width: 420px; height: 507px; flex: none">
+<div aria-hidden="true" style="position: absolute; left: -20px; right: -30px; top: -30px; bottom: 10px; background: radial-gradient(38% 30% at 30% 22%, rgba(63,64,36,0.95) 0%, rgba(63,64,36,0) 100%), radial-gradient(34% 32% at 70% 26%, rgba(167,172,95,0.9) 0%, rgba(167,172,95,0) 100%), radial-gradient(30% 26% at 48% 46%, rgba(205,206,140,0.85) 0%, rgba(205,206,140,0) 100%), radial-gradient(36% 30% at 62% 72%, rgba(226,214,180,0.85) 0%, rgba(226,214,180,0) 100%), radial-gradient(30% 28% at 28% 66%, rgba(110,112,62,0.9) 0%, rgba(110,112,62,0) 100%), radial-gradient(closest-side at 50% 46%, #7E8448 0%, #595A34 50%, rgba(34,34,34,0) 100%); filter: blur(14px)"></div>
+<div aria-hidden="true" style="position: absolute; left: 103.3px; top: 39.8px; width: 148.6px; height: 323.6px; transform: rotate(11.8deg); border-radius: 20px; overflow: hidden; background: #F4F1EB; isolation: isolate">
+<div class="brillo" aria-hidden="true" style="position: absolute; inset: 0; z-index: 3; pointer-events: none; border-radius: inherit; background: linear-gradient(125deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.03) 22%, rgba(255,255,255,0) 40%), radial-gradient(120% 60% at 85% 100%, rgba(255,255,255,0.08), rgba(255,255,255,0) 60%); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18), inset 0 0 14px rgba(255,255,255,0.05)"></div>
+<div class="brillo-paso" aria-hidden="true" style="position: absolute; top: -20%; bottom: -20%; left: -60%; width: 45%; z-index: 3; pointer-events: none; background: linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.16) 50%, rgba(255,255,255,0) 100%)"></div>
+<div style="width: 194px; height: 422px; zoom: 0.766">
+<div style="position: relative; width: 100%; height: 100%; border-radius: 0; overflow: hidden; background: #F4F1EB; color: #222222; font-family: 'Hanken Grotesk', sans-serif; font-size: 9px; line-height: 1.3; display: flex; flex-direction: column">
+<div style="background: #595A34; color: #F4F1EB; padding: 8px 14px 10px">
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 9px; font-weight: 600"><span>9:41</span><span style="width: 56px; height: 14px; border-radius: 10px; background: #1E1F14"></span><span>●●●</span></div>
+<div style="display: flex; align-items: center; gap: 8px; margin-top: 10px">
+<span style="width: 26px; height: 26px; border-radius: 50%; background: rgba(244,241,235,.18); display: inline-flex; align-items: center; justify-content: center"><img src="logo.png" alt="" style="height: 8px; width: auto"></span>
+<span style="display: flex; flex-direction: column"><b style="font-size: 11px">Asistente Astor</b><span style="font-size: 8px; color: rgba(244,241,235,.75)"><span class="vivo" style="display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: #A7AC5F; margin-right: 3px"></span>Obra · Casa Carmelo</span></span>
+</div>
+</div>
+<div style="flex: 1; position: relative; font-size: 8.5px; line-height: 1.35; overflow: hidden">
+<div class="tl-s tl-s1" style="position: absolute; inset: 0; padding: 10px 9px; display: flex; flex-direction: column; gap: 7px">
+<p style="margin: 0 auto 2px; font-size: 7px; color: #6A6A63; background: #E8E4DC; border-radius: 6px; padding: 2px 7px">Hoy · en obra</p>
+<div class="l1" style="align-self: flex-end; max-width: 80%; background: #595A34; color: #F4F1EB; border-radius: 12px 12px 3px 12px; padding: 7px 9px">¿Qué espesor lleva el contrapiso de planta baja?</div>
+<div class="l2" style="align-self: flex-start; max-width: 86%; background: #FFFFFF; border: 1px solid #E2DED6; border-radius: 12px 12px 12px 3px; padding: 7px 9px"><b>12 cm</b> de hormigón pobre sobre film. En P00 son <b>86 m²</b>, según el cómputo de Revit.</div>
+<div class="l3" style="align-self: flex-end; max-width: 80%; background: #595A34; color: #F4F1EB; border-radius: 12px 12px 3px 12px; padding: 7px 9px">¿Cómo venimos con Mampostería?</div>
+<div class="l4" style="align-self: flex-start; max-width: 86%; background: #FFFFFF; border: 1px solid #E2DED6; border-radius: 12px 12px 12px 3px; padding: 7px 9px">Gastaste <b>$ 3,1 M</b> de $ 3,4 M (91%) con el rubro al <b>78%</b> de avance.</div>
+<div class="l5" style="align-self: flex-start; max-width: 86%; background: #FFFFFF; border: 1px solid #E2DED6; border-radius: 12px 12px 12px 3px; padding: 7px 9px"><span style="color: #9C4A3A; font-weight: 600">Atención:</span> a este ritmo se pasa un 12%. ¿Te armo una tarea para revisarlo?</div>
+</div>
+<div class="tl-s tl-s2" style="position: absolute; inset: 0; padding: 10px 9px; display: flex; flex-direction: column; gap: 7px">
+<p style="margin: 0 auto 2px; font-size: 7px; color: #6A6A63; background: #E8E4DC; border-radius: 6px; padding: 2px 7px">Factura recibida por WhatsApp</p>
+<div style="background: #FFFFFF; border: 1px solid #E2DED6; border-radius: 10px; overflow: hidden">
+<div style="display: flex; align-items: center; gap: 6px; padding: 7px 8px; border-bottom: 1px solid #EEEBE4"><span class="vivo" style="width: 6px; height: 6px; border-radius: 50%; background: #595A34; flex: none"></span><b>Leyendo la factura…</b></div>
+<div style="display: flex; gap: 8px; padding: 8px">
+<div style="position: relative; width: 44px; height: 60px; flex: none; border-radius: 5px; background: #FBFAF7; border: 1px solid #D6D2CA; overflow: hidden">
+<div style="padding: 5px; display: flex; flex-direction: column; gap: 3px"><i style="display: block; height: 4px; width: 60%; background: #222222; border-radius: 1px"></i><i style="display: block; height: 3px; width: 85%; background: #D6D2CA; border-radius: 1px"></i><i style="display: block; height: 3px; width: 70%; background: #D6D2CA; border-radius: 1px"></i><i style="display: block; height: 3px; width: 90%; background: #D6D2CA; border-radius: 1px; margin-top: 3px"></i><i style="display: block; height: 3px; width: 75%; background: #D6D2CA; border-radius: 1px"></i><i style="display: block; height: 4px; width: 40%; background: #595A34; border-radius: 1px; margin-top: 4px"></i></div>
+<div class="scan" style="position: absolute; left: 0; right: 0; top: 0; height: 12px; background: linear-gradient(180deg, rgba(89,90,52,0), rgba(89,90,52,.4), rgba(89,90,52,0))"></div>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; font-size: 8px">
+<li class="l1" style="display: flex; gap: 4px"><b style="color: #595A34">✓</b><span>Corralón El Sol · Factura A</span></li>
+<li class="l2" style="display: flex; gap: 4px"><b style="color: #595A34">✓</b><span>40 bolsas de cemento → <b>Mampostería</b></span></li>
+<li class="l3" style="display: flex; gap: 4px"><b style="color: #595A34">✓</b><span>6 m³ de arena → <b>Contrapisos</b></span></li>
+<li class="l4" style="display: flex; gap: 4px"><b style="color: #595A34">✓</b><span>Flete → <b>Gastos generales</b></span></li>
+</ul>
+</div>
+</div>
+<div class="l5" style="background: #595A34; color: #F4F1EB; border-radius: 9px; padding: 8px 9px; display: flex; justify-content: space-between; align-items: center; font-weight: 600"><span>3 compras listas en la obra</span><span style="background: #F4F1EB; color: #3F4024; border-radius: 5px; padding: 2px 7px; font-size: 7.5px">Revisar</span></div>
+</div>
+<div class="tl-s tl-s3" style="position: absolute; inset: 0; padding: 10px 9px; display: flex; flex-direction: column; gap: 7px">
+<p style="margin: 0 auto 2px; font-size: 7px; color: #6A6A63; background: #E8E4DC; border-radius: 6px; padding: 2px 7px">Resumen de la semana</p>
+<div class="l1" style="background: #FFFFFF; border: 1px solid #E2DED6; border-radius: 10px; padding: 8px 9px">
+<div style="display: flex; justify-content: space-between; font-size: 8px"><b>Avance de obra</b><b>62%</b></div>
+<div style="height: 5px; border-radius: 4px; background: #EEEBE4; overflow: hidden; margin-top: 5px"><i style="display: block; width: 62%; height: 100%; background: #595A34"></i></div>
+<div style="display: flex; justify-content: space-between; font-size: 7px; color: #6A6A63; margin-top: 4px"><span>Plan: 60%</span><span>Fin previsto: 14/03</span></div>
+</div>
+<div class="l2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px">
+<div style="background: #FFFFFF; border: 1px solid #E2DED6; border-radius: 10px; padding: 7px 8px"><span style="font-size: 6.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #6A6A63">Costo</span><br><b style="font-size: 13px">−3%</b><br><span style="font-size: 7px; color: #6A6A63">vs presupuesto</span></div>
+<div style="background: #FFFFFF; border: 1px solid #E2DED6; border-radius: 10px; padding: 7px 8px"><span style="font-size: 6.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #6A6A63">Por cobrar</span><br><b style="font-size: 13px">$ 4,2 M</b><br><span style="font-size: 7px; color: #6A6A63">certificado 05</span></div>
+</div>
+<div class="l3" style="background: #FFFFFF; border: 1px solid #E2DED6; border-radius: 10px; padding: 7px 9px; display: flex; flex-direction: column; gap: 5px; font-size: 8px">
+<b style="font-size: 8px; color: #4A4A45">Para esta semana</b>
+<span style="display: flex; gap: 6px; align-items: center"><i style="width: 6px; height: 6px; border-radius: 50%; background: #9C4A3A; flex: none"></i>Pedir porcelanato · vence hoy</span>
+<span style="display: flex; gap: 6px; align-items: center"><i style="width: 6px; height: 6px; border-radius: 50%; background: #D8C9B0; flex: none"></i>Emitir certificado 05</span>
+<span style="display: flex; gap: 6px; align-items: center"><i style="width: 6px; height: 6px; border-radius: 50%; background: #595A34; flex: none"></i>Pagar la quincena el viernes</span>
+</div>
+<div class="l4" style="background: #222222; color: #F4F1EB; border-radius: 9px; padding: 8px 9px; display: flex; gap: 6px"><span style="width: 6px; height: 6px; border-radius: 50%; background: #A7AC5F; flex: none; margin-top: 2px"></span><span>Pronóstico: lluvia el jueves. Conviene adelantar el hormigonado.</span></div>
+</div>
+</div>
+<div style="display: flex; align-items: center; gap: 6px; padding: 8px 9px 12px; border-top: 1px solid #E2DED6; background: #FFFFFF">
+<span style="flex: 1; border: 1px solid #D6D2CA; border-radius: 12px; padding: 5px 9px; font-size: 8px; color: #6A6A63">Preguntale a Astor…</span>
+<span style="width: 22px; height: 22px; border-radius: 50%; background: #595A34; color: #F4F1EB; display: inline-flex; align-items: center; justify-content: center; font-size: 10px">↑</span>
+</div>
+</div>
+</div>
+</div>
+<img src="mano.webp" alt="Una mano sostiene un celular con el asistente de Astor abierto" class="mano-img" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block">
+</div>
+</div>
+</div>
+</div>
+</section>
+<section aria-labelledby="integ-t" style="background: #F4F1EB; border-top: 1px solid #D6D2CA">
+<div style="max-width: 1240px; margin: 0 auto; padding: 64px 32px; display: flex; flex-wrap: wrap; gap: 28px 48px; align-items: center">
+<div class="revela" style="flex: 1 1 260px; min-width: 0">
+<p style="margin: 0 0 10px; font-size: 13px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #595A34">Integraciones</p>
+<h2 id="integ-t" style="margin: 0; font-weight: 700; font-size: clamp(26px, 2.8vw, 36px); line-height: 1.1; letter-spacing: -0.015em">Funciona con lo que ya usás.</h2>
+</div>
+<div class="revela" style="flex: 2 1 560px; min-width: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px">
+<div class="integ" style="display: flex; align-items: center; gap: 12px; padding: 16px 18px; border: 1px solid #D6D2CA; border-radius: 12px; background: #FFFFFF">
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#595A34" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M12 3 20 7.5v9L12 21l-8-4.5v-9Z"></path><path d="M4 7.5 12 12l8-4.5M12 12v9"></path></svg>
+<span style="display: flex; flex-direction: column; min-width: 0"><b style="font-size: 15.5px; color: #222222">Revit</b><span style="font-size: 13px; color: #55554F">Cómputos desde el modelo</span></span>
+</div>
+<div class="integ" style="display: flex; align-items: center; gap: 12px; padding: 16px 18px; border: 1px solid #D6D2CA; border-radius: 12px; background: #FFFFFF">
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#595A34" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><path d="m4 7 8 6 8-6"></path></svg>
+<span style="display: flex; flex-direction: column; min-width: 0"><b style="font-size: 15.5px; color: #222222">Gmail</b><span style="font-size: 13px; color: #55554F">Mails y facturas</span></span>
+</div>
+<div class="integ" style="display: flex; align-items: center; gap: 12px; padding: 16px 18px; border: 1px solid #D6D2CA; border-radius: 12px; background: #FFFFFF">
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#595A34" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><rect x="3.5" y="5" width="17" height="15" rx="2.5"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg>
+<span style="display: flex; flex-direction: column; min-width: 0"><b style="font-size: 15.5px; color: #222222">Google Calendar</b><span style="font-size: 13px; color: #55554F">Reuniones y vencimientos</span></span>
+</div>
+<div class="integ" style="display: flex; align-items: center; gap: 12px; padding: 16px 18px; border: 1px solid #D6D2CA; border-radius: 12px; background: #FFFFFF">
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#595A34" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.4-4A8 8 0 1 1 20 11.5Z"></path></svg>
+<span style="display: flex; flex-direction: column; min-width: 0"><b style="font-size: 15.5px; color: #222222">WhatsApp</b><span style="font-size: 13px; color: #55554F">Consultas desde la obra</span></span>
+</div>
+<div class="integ" style="display: flex; align-items: center; gap: 12px; padding: 16px 18px; border: 1px solid #D6D2CA; border-radius: 12px; background: #FFFFFF">
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#595A34" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><rect x="4" y="3.5" width="16" height="17" rx="2.5"></rect><path d="M4 9h16M4 14.5h16M10 9v11.5"></path></svg>
+<span style="display: flex; flex-direction: column; min-width: 0"><b style="font-size: 15.5px; color: #222222">Excel</b><span style="font-size: 13px; color: #55554F">Importá tus planillas</span></span>
+</div>
+<div class="integ" style="display: flex; align-items: center; gap: 12px; padding: 16px 18px; border: 1px solid #D6D2CA; border-radius: 12px; background: #FFFFFF">
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#595A34" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"></path></svg>
+<span style="display: flex; flex-direction: column; min-width: 0"><b style="font-size: 15.5px; color: #222222">Claude</b><span style="font-size: 13px; color: #55554F">La IA del asistente</span></span>
+</div>
+</div>
+</div>
+</section>
+<section id="demo" style="background: #595A34; color: #F4F1EB; position: relative; overflow: hidden">
+<svg class="plano" aria-hidden="true" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.12; pointer-events: none" fill="none" stroke="#F4F1EB" stroke-width="1.2">
+<rect x="60" y="80" width="420" height="300" rx="2"></rect><path d="M60 240h420M270 80v300" style="animation-delay: .5s"></path><circle cx="1300" cy="140" r="90" style="animation-delay: 1s"></circle>
+</svg>
+<div style="position: relative; max-width: 1240px; margin: 0 auto; padding: 80px 32px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+<div id="como" class="revela" style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: 'Hanken Grotesk', sans-serif; font-weight: 700; font-size: clamp(32px, 3.8vw, 50px); line-height: 1.05; letter-spacing: -0.02em">¿Estás listo para llevar tu estudio al siguiente nivel?</h2>
+<p style="margin: 0; color: #EDE9DF; max-width: 480px">Tu próxima obra puede ser la primera bien administrada. Así se empieza:</p>
+<ol style="margin: 8px 0 0; max-width: 520px; padding: 0; list-style: none; border-bottom: 1px solid rgba(244,241,235,0.22)">
+<li style="display: grid; grid-template-columns: 36px 1fr; gap: 14px; align-items: start; padding: 14px 0; border-top: 1px solid rgba(244,241,235,0.22)">
+<span style="width: 32px; height: 32px; border-radius: 999px; border: 1px solid rgba(244,241,235,0.6); color: #F4F1EB; display: inline-flex; align-items: center; justify-content: center; font-family: 'Hanken Grotesk', sans-serif; font-weight: 600; font-size: 14px">1</span>
+<span style="display: flex; flex-direction: column; gap: 2px"><b style="font-family: 'Hanken Grotesk', sans-serif; font-size: 17px; font-weight: 700">Videollamada de 30 minutos</b><span style="color: #E6E1D5; font-size: 15px; line-height: 1.45">Te mostramos Astor funcionando con una obra de ejemplo.</span></span>
+</li>
+<li style="display: grid; grid-template-columns: 36px 1fr; gap: 14px; align-items: start; padding: 14px 0; border-top: 1px solid rgba(244,241,235,0.22)">
+<span style="width: 32px; height: 32px; border-radius: 999px; border: 1px solid rgba(244,241,235,0.6); color: #F4F1EB; display: inline-flex; align-items: center; justify-content: center; font-family: 'Hanken Grotesk', sans-serif; font-weight: 600; font-size: 14px">2</span>
+<span style="display: flex; flex-direction: column; gap: 2px"><b style="font-family: 'Hanken Grotesk', sans-serif; font-size: 17px; font-weight: 700">Probalo gratis 15 días</b><span style="color: #E6E1D5; font-size: 15px; line-height: 1.45">Sin tarjeta de crédito ni sorpresas.</span></span>
+</li>
+<li style="display: grid; grid-template-columns: 36px 1fr; gap: 14px; align-items: start; padding: 14px 0; border-top: 1px solid rgba(244,241,235,0.22)">
+<span style="width: 32px; height: 32px; border-radius: 999px; border: 1px solid rgba(244,241,235,0.6); color: #F4F1EB; display: inline-flex; align-items: center; justify-content: center; font-family: 'Hanken Grotesk', sans-serif; font-weight: 600; font-size: 14px">3</span>
+<span style="display: flex; flex-direction: column; gap: 2px"><b style="font-family: 'Hanken Grotesk', sans-serif; font-size: 17px; font-weight: 700">Tu equipo la usa solo</b><span style="color: #E6E1D5; font-size: 15px; line-height: 1.45">Cada pantalla se explica sola y el manual viene adentro.</span></span>
+</li>
+</ol>
+</div>
+<form class="revela" style="flex: 1 1 420px; min-width: 0; background: #F4F1EB; color: #222222; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 12px; font-family: 'Hanken Grotesk', sans-serif; box-shadow: 0 40px 70px -40px rgba(0,0,0,.6)">
+<label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Nombre<input type="text" name="nombre" autocomplete="name" style="font: inherit; font-weight: 400; padding: 12px 14px; border: 1px solid #8A8A84; border-radius: 10px; background: #FFFFFF; min-height: 44px"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Estudio o constructora<input type="text" name="empresa" autocomplete="organization" style="font: inherit; font-weight: 400; padding: 12px 14px; border: 1px solid #8A8A84; border-radius: 10px; background: #FFFFFF; min-height: 44px"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Mail<input type="email" name="mail" autocomplete="email" style="font: inherit; font-weight: 400; padding: 12px 14px; border: 1px solid #8A8A84; border-radius: 10px; background: #FFFFFF; min-height: 44px"></label>
+<button type="submit" class="cta" style="margin-top: 6px; background: #595A34; color: #F4F1EB; border: 0; border-radius: 999px; padding: 15px 24px; font: inherit; font-weight: 600; font-size: 16px; cursor: pointer; min-height: 48px">Quiero la demo</button>
+</form>
+</div>
+</section>
+<footer style="background: #222222; color: #DCD8CF">
+<div style="max-width: 1240px; margin: 0 auto; padding: 48px 32px; display: flex; flex-wrap: wrap; gap: 24px 48px; align-items: center; justify-content: space-between; font-family: 'Hanken Grotesk', sans-serif; font-size: 14px">
+<img src="logo.png" alt="Astor" style="height: 18px; width: auto; display: block">
+<p style="margin: 0; font-size: 15px; font-weight: 500; color: #DCD8CF">Hecho en Argentina, por arquitectos, para arquitectos.</p>
+<p style="margin: 0">ASTOR Arquitectura · [CONTACTO]</p>
+</div>
+</footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
