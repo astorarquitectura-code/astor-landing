@@ -222,3 +222,4 @@ a{color:#595A34}a:hover{color:#3F4024}
 .lp .i3-saltar:focus-visible{outline:2px solid #F4F1EB;outline-offset:3px}
 .lp.intro-on .pal,.lp.intro-on .entra,.lp.intro-on .pantalla,.lp.intro-on .pantalla-in,.lp.intro-on .plano path,.lp.intro-on .plano rect,.lp.intro-on .plano circle{animation-play-state:paused}
 @media (prefers-reduced-motion: reduce){.lp .i3{display:none}}
+@media (max-width: 760px){.lp .nav-p{grid-template-columns:1fr auto!important}.lp .nav-p .nav-links{grid-column:1 / -1;grid-row:2}}
