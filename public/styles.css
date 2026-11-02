@@ -190,14 +190,14 @@ a{color:#595A34}a:hover{color:#3F4024}
 @keyframes mece{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
 .lp .est{position:absolute;width:3px;height:3px;border-radius:50%;background:#F4F1EB;box-shadow:0 0 6px rgba(244,241,235,.8);animation:brilla 3.2s ease-in-out infinite;animation-delay:var(--t)}
 .lp .luna{animation:mece 8s ease-in-out infinite;transform-origin:50% 50%}
-.lp .integ{transition:border-color .25s,transform .25s}.lp .integ:hover{border-color:#595A34;transform:translateY(-2px)}
-@media (max-width: 760px){.lp .integ{padding:12px 14px}}
-@media (max-width: 560px){.lp section[aria-labelledby="integ-t"] .revela:last-child{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+.lp .plan{transition:transform .3s,box-shadow .3s}.lp .plan:hover{transform:translateY(-4px);box-shadow:0 26px 50px -34px rgba(34,34,34,.55)}
+.lp .plan-btn{transition:filter .2s,transform .2s}.lp .plan-btn:hover{filter:brightness(1.06);transform:translateY(-1px)}
+@media (max-width: 960px){.lp .planes-grid{grid-template-columns:1fr!important;max-width:520px;margin:0 auto;row-gap:30px!important}}
 .lp .i3{position:fixed;inset:0;z-index:200;background:#595A34;color:#F4F1EB;overflow:hidden;animation:i3Sale .85s cubic-bezier(.7,0,.2,1) 7.65s both}
 .lp .i3.fuera{display:none}
 @keyframes i3Sale{from{clip-path:inset(0 0 0 0)}to{clip-path:inset(0 0 100% 0)}}
 @keyframes i3Sube{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-.lp .i3-grid{width:100%;max-width:1240px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:24px;align-items:center}
+.lp .i3-grid{width:100%;max-width:1240px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:24px;align-items:center}
 .lp .i3-col{position:relative;height:1.1em;font-size:clamp(30px,3.6vw,48px);font-weight:700;letter-spacing:-0.025em;line-height:1.1;text-align:right}
 .lp .i3-lista{position:absolute;right:0;top:0;display:flex;flex-direction:column;align-items:flex-end;transform:translateY(calc(-0 * 1.1em));animation:i3Lista 4.25s cubic-bezier(.65,0,.25,1) 0.70s both}
 @keyframes i3Lista{0%,13.0%{transform:translateY(calc(-0 * 1.1em))}20.0%,33.0%{transform:translateY(calc(-1 * 1.1em))}40.0%,53.0%{transform:translateY(calc(-2 * 1.1em))}60.0%,73.0%{transform:translateY(calc(-3 * 1.1em))}80.0%,93.0%{transform:translateY(calc(-4 * 1.1em))}100%{transform:translateY(calc(-5 * 1.1em))}}

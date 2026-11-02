@@ -5,7 +5,6 @@
   var tIntro;
   function finIntro() { clearTimeout(tIntro); lp.classList.remove('intro-on'); intro.classList.add('fuera'); }
   if (quieto) finIntro(); else tIntro = setTimeout(finIntro, 8550);
-  document.getElementById('saltar').addEventListener('click', finIntro);
 
   // Qué hace Astor: visor que pasa solo
   var sel = 1, timer;
