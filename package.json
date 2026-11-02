@@ -1,0 +1,14 @@
+{
+  "name": "astor-landing",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Landing de Astor (sitio estático en /public)",
+  "scripts": {
+    "dev": "serve public -l 3000",
+    "start": "serve public -l 3000",
+    "build": "echo \"Sitio estático: no requiere build\""
+  },
+  "devDependencies": {
+    "serve": "14.2.4"
+  }
+}
